@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.lblConfiguracoes = new System.Windows.Forms.Label();
+            this.btnRegistroDeTransacoes = new System.Windows.Forms.Button();
+            this.btnRelatoriosFinanceiros = new System.Windows.Forms.Button();
+            this.btnConfiguracoes = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pbCacto = new System.Windows.Forms.PictureBox();
             this.pbLogoForPro = new System.Windows.Forms.PictureBox();
-            this.btnRegistroDeTransacoes = new System.Windows.Forms.Button();
-            this.btnRelatoriosFinanceiros = new System.Windows.Forms.Button();
-            this.btnConfiguracoes = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -55,6 +55,63 @@
             this.lblConfiguracoes.Size = new System.Drawing.Size(147, 22);
             this.lblConfiguracoes.TabIndex = 7;
             this.lblConfiguracoes.Text = "Configurações";
+            // 
+            // btnRegistroDeTransacoes
+            // 
+            this.btnRegistroDeTransacoes.BackColor = System.Drawing.Color.Transparent;
+            this.btnRegistroDeTransacoes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnRegistroDeTransacoes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegistroDeTransacoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistroDeTransacoes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(51)))));
+            this.btnRegistroDeTransacoes.Location = new System.Drawing.Point(12, 325);
+            this.btnRegistroDeTransacoes.Name = "btnRegistroDeTransacoes";
+            this.btnRegistroDeTransacoes.Size = new System.Drawing.Size(227, 32);
+            this.btnRegistroDeTransacoes.TabIndex = 8;
+            this.btnRegistroDeTransacoes.Text = "Registro de Transações";
+            this.btnRegistroDeTransacoes.UseVisualStyleBackColor = false;
+            this.btnRegistroDeTransacoes.Click += new System.EventHandler(this.btnRegistroDeTransacoes_Click);
+            // 
+            // btnRelatoriosFinanceiros
+            // 
+            this.btnRelatoriosFinanceiros.BackColor = System.Drawing.Color.Transparent;
+            this.btnRelatoriosFinanceiros.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnRelatoriosFinanceiros.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRelatoriosFinanceiros.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRelatoriosFinanceiros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(51)))));
+            this.btnRelatoriosFinanceiros.Location = new System.Drawing.Point(296, 310);
+            this.btnRelatoriosFinanceiros.Name = "btnRelatoriosFinanceiros";
+            this.btnRelatoriosFinanceiros.Size = new System.Drawing.Size(227, 32);
+            this.btnRelatoriosFinanceiros.TabIndex = 9;
+            this.btnRelatoriosFinanceiros.Text = "Relatórios Financeiros";
+            this.btnRelatoriosFinanceiros.UseVisualStyleBackColor = false;
+            // 
+            // btnConfiguracoes
+            // 
+            this.btnConfiguracoes.BackColor = System.Drawing.Color.Transparent;
+            this.btnConfiguracoes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConfiguracoes.Enabled = false;
+            this.btnConfiguracoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfiguracoes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(51)))));
+            this.btnConfiguracoes.Location = new System.Drawing.Point(598, 274);
+            this.btnConfiguracoes.Name = "btnConfiguracoes";
+            this.btnConfiguracoes.Size = new System.Drawing.Size(143, 32);
+            this.btnConfiguracoes.TabIndex = 10;
+            this.btnConfiguracoes.Text = "Configurações";
+            this.btnConfiguracoes.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(51)))));
+            this.button1.Location = new System.Drawing.Point(735, 410);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(53, 28);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Sair";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // pictureBox3
             // 
@@ -113,62 +170,6 @@
             this.pbLogoForPro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbLogoForPro.TabIndex = 0;
             this.pbLogoForPro.TabStop = false;
-            // 
-            // btnRegistroDeTransacoes
-            // 
-            this.btnRegistroDeTransacoes.BackColor = System.Drawing.Color.Transparent;
-            this.btnRegistroDeTransacoes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnRegistroDeTransacoes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegistroDeTransacoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistroDeTransacoes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(51)))));
-            this.btnRegistroDeTransacoes.Location = new System.Drawing.Point(12, 325);
-            this.btnRegistroDeTransacoes.Name = "btnRegistroDeTransacoes";
-            this.btnRegistroDeTransacoes.Size = new System.Drawing.Size(227, 32);
-            this.btnRegistroDeTransacoes.TabIndex = 8;
-            this.btnRegistroDeTransacoes.Text = "Registro de Transações";
-            this.btnRegistroDeTransacoes.UseVisualStyleBackColor = false;
-            // 
-            // btnRelatoriosFinanceiros
-            // 
-            this.btnRelatoriosFinanceiros.BackColor = System.Drawing.Color.Transparent;
-            this.btnRelatoriosFinanceiros.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnRelatoriosFinanceiros.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRelatoriosFinanceiros.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRelatoriosFinanceiros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(51)))));
-            this.btnRelatoriosFinanceiros.Location = new System.Drawing.Point(296, 310);
-            this.btnRelatoriosFinanceiros.Name = "btnRelatoriosFinanceiros";
-            this.btnRelatoriosFinanceiros.Size = new System.Drawing.Size(227, 32);
-            this.btnRelatoriosFinanceiros.TabIndex = 9;
-            this.btnRelatoriosFinanceiros.Text = "Relatórios Financeiros";
-            this.btnRelatoriosFinanceiros.UseVisualStyleBackColor = false;
-            // 
-            // btnConfiguracoes
-            // 
-            this.btnConfiguracoes.BackColor = System.Drawing.Color.Transparent;
-            this.btnConfiguracoes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConfiguracoes.Enabled = false;
-            this.btnConfiguracoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfiguracoes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(51)))));
-            this.btnConfiguracoes.Location = new System.Drawing.Point(598, 274);
-            this.btnConfiguracoes.Name = "btnConfiguracoes";
-            this.btnConfiguracoes.Size = new System.Drawing.Size(143, 32);
-            this.btnConfiguracoes.TabIndex = 10;
-            this.btnConfiguracoes.Text = "Configurações";
-            this.btnConfiguracoes.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(51)))));
-            this.button1.Location = new System.Drawing.Point(735, 410);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(53, 28);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Sair";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // FrmPrincipal
             // 

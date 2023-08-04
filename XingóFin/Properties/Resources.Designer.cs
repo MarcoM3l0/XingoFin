@@ -83,6 +83,16 @@ namespace XingóFin.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Entrada {
+            get {
+                object obj = ResourceManager.GetObject("Entrada", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ForPro___sistemas_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("ForPro_-_sistemas-removebg-preview", resourceCulture);
@@ -106,6 +116,26 @@ namespace XingóFin.Properties {
         internal static System.Drawing.Bitmap Relatórios_Financeiros {
             get {
                 object obj = ResourceManager.GetObject("Relatórios_Financeiros", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Saida {
+            get {
+                object obj = ResourceManager.GetObject("Saida", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Visualização {
+            get {
+                object obj = ResourceManager.GetObject("Visualização", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
