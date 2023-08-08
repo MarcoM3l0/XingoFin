@@ -21,8 +21,12 @@ namespace XingóFin
         {
             FrmRegistroDeTransacoes registroDeTransacoes = new FrmRegistroDeTransacoes();
 
-            registroDeTransacoes.Show();
-            this.Hide();
+            registroDeTransacoes.ShowDialog();
+        }
+
+        private void btnRelatoriosFinanceiros_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

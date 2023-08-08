@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace XingóFin
 {
-    public partial class FrmRegistroDeTransacoes : Form
+    public partial class FrmRelatoriosFinanceiros : Form
     {
-        public FrmRegistroDeTransacoes()
+        public FrmRelatoriosFinanceiros()
         {
             InitializeComponent();
         }
-
-        private void btnSair_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
     }
 }

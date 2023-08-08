@@ -58,6 +58,12 @@
     <Compile Include="FrmRegistroDeTransacoes.Designer.cs">
       <DependentUpon>FrmRegistroDeTransacoes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRelatoriosFinanceiros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRelatoriosFinanceiros.Designer.cs">
+      <DependentUpon>FrmRelatoriosFinanceiros.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmPrincipal.resx">

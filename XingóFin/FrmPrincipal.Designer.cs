@@ -84,6 +84,7 @@
             this.btnRelatoriosFinanceiros.TabIndex = 9;
             this.btnRelatoriosFinanceiros.Text = "Relatórios Financeiros";
             this.btnRelatoriosFinanceiros.UseVisualStyleBackColor = false;
+            this.btnRelatoriosFinanceiros.Click += new System.EventHandler(this.btnRelatoriosFinanceiros_Click);
             // 
             // btnConfiguracoes
             // 
@@ -190,6 +191,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tela Principal";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
