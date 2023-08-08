@@ -34,9 +34,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pbCacto = new System.Windows.Forms.PictureBox();
             this.pbLogoForPro = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnGraficosDeAnalise = new System.Windows.Forms.Button();
+            this.btnFluxoDeCaixa = new System.Windows.Forms.Button();
+            this.btnDemonstrativoDeResultados = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -114,47 +114,47 @@
             this.pbLogoForPro.TabIndex = 13;
             this.pbLogoForPro.TabStop = false;
             // 
-            // button3
+            // btnGraficosDeAnalise
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(116)))), ((int)(((byte)(63)))));
-            this.button3.Location = new System.Drawing.Point(641, 336);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(66, 34);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "Saída";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnGraficosDeAnalise.BackColor = System.Drawing.Color.Transparent;
+            this.btnGraficosDeAnalise.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnGraficosDeAnalise.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGraficosDeAnalise.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGraficosDeAnalise.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(116)))), ((int)(((byte)(63)))));
+            this.btnGraficosDeAnalise.Location = new System.Drawing.Point(586, 336);
+            this.btnGraficosDeAnalise.Name = "btnGraficosDeAnalise";
+            this.btnGraficosDeAnalise.Size = new System.Drawing.Size(181, 34);
+            this.btnGraficosDeAnalise.TabIndex = 21;
+            this.btnGraficosDeAnalise.Text = "Gráficos de Análise";
+            this.btnGraficosDeAnalise.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnFluxoDeCaixa
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(116)))), ((int)(((byte)(63)))));
-            this.button2.Location = new System.Drawing.Point(359, 336);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 34);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "Entrada";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnFluxoDeCaixa.BackColor = System.Drawing.Color.Transparent;
+            this.btnFluxoDeCaixa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnFluxoDeCaixa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFluxoDeCaixa.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFluxoDeCaixa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(116)))), ((int)(((byte)(63)))));
+            this.btnFluxoDeCaixa.Location = new System.Drawing.Point(331, 336);
+            this.btnFluxoDeCaixa.Name = "btnFluxoDeCaixa";
+            this.btnFluxoDeCaixa.Size = new System.Drawing.Size(147, 34);
+            this.btnFluxoDeCaixa.TabIndex = 20;
+            this.btnFluxoDeCaixa.Text = "Fluxo de Caixa";
+            this.btnFluxoDeCaixa.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnDemonstrativoDeResultados
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(116)))), ((int)(((byte)(63)))));
-            this.button1.Location = new System.Drawing.Point(57, 336);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 34);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Visualização";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnDemonstrativoDeResultados.BackColor = System.Drawing.Color.Transparent;
+            this.btnDemonstrativoDeResultados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDemonstrativoDeResultados.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDemonstrativoDeResultados.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDemonstrativoDeResultados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(116)))), ((int)(((byte)(63)))));
+            this.btnDemonstrativoDeResultados.Location = new System.Drawing.Point(54, 336);
+            this.btnDemonstrativoDeResultados.Name = "btnDemonstrativoDeResultados";
+            this.btnDemonstrativoDeResultados.Size = new System.Drawing.Size(144, 57);
+            this.btnDemonstrativoDeResultados.TabIndex = 19;
+            this.btnDemonstrativoDeResultados.Text = "Demonstrativo de Resultados";
+            this.btnDemonstrativoDeResultados.UseVisualStyleBackColor = false;
             // 
             // FrmRelatoriosFinanceiros
             // 
@@ -162,9 +162,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(90)))), ((int)(((byte)(43)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnGraficosDeAnalise);
+            this.Controls.Add(this.btnFluxoDeCaixa);
+            this.Controls.Add(this.btnDemonstrativoDeResultados);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -190,8 +190,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnGraficosDeAnalise;
+        private System.Windows.Forms.Button btnFluxoDeCaixa;
+        private System.Windows.Forms.Button btnDemonstrativoDeResultados;
     }
 }
