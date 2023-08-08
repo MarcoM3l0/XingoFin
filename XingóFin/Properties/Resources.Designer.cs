@@ -83,6 +83,16 @@ namespace XingóFin.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Demonstrativo_de_Resultados {
+            get {
+                object obj = ResourceManager.GetObject("Demonstrativo de Resultados", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Entrada {
             get {
                 object obj = ResourceManager.GetObject("Entrada", resourceCulture);
@@ -93,9 +103,29 @@ namespace XingóFin.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Fluxo_de_Caixa {
+            get {
+                object obj = ResourceManager.GetObject("Fluxo de Caixa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ForPro___sistemas_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("ForPro_-_sistemas-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gráficos_de_Análise {
+            get {
+                object obj = ResourceManager.GetObject("Gráficos de Análise", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

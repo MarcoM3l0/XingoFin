@@ -19,14 +19,16 @@ namespace XingóFin
 
         private void btnRegistroDeTransacoes_Click(object sender, EventArgs e)
         {
-            FrmRegistroDeTransacoes registroDeTransacoes = new FrmRegistroDeTransacoes();
+            FrmRegistroDeTransacoes frm = new FrmRegistroDeTransacoes();
 
-            registroDeTransacoes.ShowDialog();
+            frm.ShowDialog();
         }
 
         private void btnRelatoriosFinanceiros_Click(object sender, EventArgs e)
         {
+            FrmRelatoriosFinanceiros frm = new FrmRelatoriosFinanceiros();
 
+            frm.ShowDialog();
         }
     }
 }
