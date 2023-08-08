@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistroDeTransacoes));
             this.btnSair = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnAtualizacaoDeTransacoes = new System.Windows.Forms.Button();
+            this.btnReceitas = new System.Windows.Forms.Button();
+            this.btnDespesas = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -60,47 +60,47 @@
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
-            // button1
+            // btnAtualizacaoDeTransacoes
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(116)))), ((int)(((byte)(63)))));
-            this.button1.Location = new System.Drawing.Point(59, 333);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 34);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Visualização";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAtualizacaoDeTransacoes.BackColor = System.Drawing.Color.Transparent;
+            this.btnAtualizacaoDeTransacoes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAtualizacaoDeTransacoes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAtualizacaoDeTransacoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizacaoDeTransacoes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(116)))), ((int)(((byte)(63)))));
+            this.btnAtualizacaoDeTransacoes.Location = new System.Drawing.Point(31, 333);
+            this.btnAtualizacaoDeTransacoes.Name = "btnAtualizacaoDeTransacoes";
+            this.btnAtualizacaoDeTransacoes.Size = new System.Drawing.Size(184, 57);
+            this.btnAtualizacaoDeTransacoes.TabIndex = 16;
+            this.btnAtualizacaoDeTransacoes.Text = "Atualização de Transações";
+            this.btnAtualizacaoDeTransacoes.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnReceitas
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(116)))), ((int)(((byte)(63)))));
-            this.button2.Location = new System.Drawing.Point(360, 333);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 34);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Entrada";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnReceitas.BackColor = System.Drawing.Color.Transparent;
+            this.btnReceitas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnReceitas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReceitas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReceitas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(116)))), ((int)(((byte)(63)))));
+            this.btnReceitas.Location = new System.Drawing.Point(360, 333);
+            this.btnReceitas.Name = "btnReceitas";
+            this.btnReceitas.Size = new System.Drawing.Size(93, 34);
+            this.btnReceitas.TabIndex = 17;
+            this.btnReceitas.Text = "Receitas ";
+            this.btnReceitas.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnDespesas
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(116)))), ((int)(((byte)(63)))));
-            this.button3.Location = new System.Drawing.Point(643, 342);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(66, 34);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "Saída";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnDespesas.BackColor = System.Drawing.Color.Transparent;
+            this.btnDespesas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDespesas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDespesas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDespesas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(116)))), ((int)(((byte)(63)))));
+            this.btnDespesas.Location = new System.Drawing.Point(629, 342);
+            this.btnDespesas.Name = "btnDespesas";
+            this.btnDespesas.Size = new System.Drawing.Size(101, 34);
+            this.btnDespesas.TabIndex = 18;
+            this.btnDespesas.Text = "Despesas";
+            this.btnDespesas.UseVisualStyleBackColor = false;
             // 
             // pictureBox3
             // 
@@ -163,9 +163,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(90)))), ((int)(((byte)(43)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnDespesas);
+            this.Controls.Add(this.btnReceitas);
+            this.Controls.Add(this.btnAtualizacaoDeTransacoes);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -193,8 +193,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnAtualizacaoDeTransacoes;
+        private System.Windows.Forms.Button btnReceitas;
+        private System.Windows.Forms.Button btnDespesas;
     }
 }
