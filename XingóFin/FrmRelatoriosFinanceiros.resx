@@ -117,38 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Configurações" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Configurações.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Relatórios_Financeiros" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Relatórios_Financeiros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Fluxo de Caixa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fluxo de Caixa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Entrada" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Entrada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cacto" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cacto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Saida" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Saida.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ForPro_-_sistemas-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ForPro_-_sistemas-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Demonstrativo de Resultados" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Demonstrativo de Resultados.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Registro_de_Transações" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Registro_de_Transações.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Visualização" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Visualização.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Gráficos de Análise" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Gráficos de Análise.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>

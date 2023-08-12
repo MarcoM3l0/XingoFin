@@ -17,5 +17,18 @@ namespace XingóFin
             InitializeComponent();
         }
 
+        private void btnRegistroDeTransacoes_Click(object sender, EventArgs e)
+        {
+            FrmRegistroDeTransacoes frm = new FrmRegistroDeTransacoes();
+
+            frm.ShowDialog();
+        }
+
+        private void btnRelatoriosFinanceiros_Click(object sender, EventArgs e)
+        {
+            FrmRelatoriosFinanceiros frm = new FrmRelatoriosFinanceiros();
+
+            frm.ShowDialog();
+        }
     }
 }

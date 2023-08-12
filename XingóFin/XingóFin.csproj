@@ -52,10 +52,28 @@
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRegistroDeTransacoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistroDeTransacoes.Designer.cs">
+      <DependentUpon>FrmRegistroDeTransacoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRelatoriosFinanceiros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRelatoriosFinanceiros.Designer.cs">
+      <DependentUpon>FrmRelatoriosFinanceiros.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistroDeTransacoes.resx">
+      <DependentUpon>FrmRegistroDeTransacoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRelatoriosFinanceiros.resx">
+      <DependentUpon>FrmRelatoriosFinanceiros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -65,6 +83,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +97,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ForPro_-_sistemas-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cacto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Registro_de_Transações.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Relatórios_Financeiros.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Configurações.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Visualização.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Entrada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Saida.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Demonstrativo de Resultados.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fluxo de Caixa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gráficos de Análise.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
