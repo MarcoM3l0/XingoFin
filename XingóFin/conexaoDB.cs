@@ -46,7 +46,7 @@ namespace XingóFin
             }
             catch(Exception error)
             {
-                MessageBox.Show("Problema ao abrir o servidor.Erro: " + error.Message);
+                MessageBox.Show("Problema ao fechar o servidor.Erro: " + error.Message);
             }
         }
 
