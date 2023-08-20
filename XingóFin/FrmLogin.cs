@@ -66,7 +66,7 @@ namespace XingóFin
 
                 if (principal.IsDisposed)
                 {
-                    this.Close();
+                    this.Show();
                 }
                 
             }
