@@ -30,5 +30,15 @@ namespace XingóFin
 
             frm.ShowDialog();
         }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

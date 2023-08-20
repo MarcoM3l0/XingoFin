@@ -33,7 +33,7 @@
             this.btnRegistroDeTransacoes = new System.Windows.Forms.Button();
             this.btnRelatoriosFinanceiros = new System.Windows.Forms.Button();
             this.btnConfiguracoes = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -100,19 +100,20 @@
             this.btnConfiguracoes.Text = "Configurações";
             this.btnConfiguracoes.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnSair
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(51)))));
-            this.button1.Location = new System.Drawing.Point(735, 410);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(53, 28);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Sair";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSair.BackColor = System.Drawing.Color.Transparent;
+            this.btnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(51)))));
+            this.btnSair.Location = new System.Drawing.Point(735, 410);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(53, 28);
+            this.btnSair.TabIndex = 11;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // pictureBox3
             // 
@@ -178,7 +179,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnConfiguracoes);
             this.Controls.Add(this.btnRelatoriosFinanceiros);
             this.Controls.Add(this.btnRegistroDeTransacoes);
@@ -193,6 +194,7 @@
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tela Principal";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmPrincipal_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -214,7 +216,7 @@
         private System.Windows.Forms.Button btnRegistroDeTransacoes;
         private System.Windows.Forms.Button btnRelatoriosFinanceiros;
         private System.Windows.Forms.Button btnConfiguracoes;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSair;
     }
 }
 
