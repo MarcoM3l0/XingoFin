@@ -172,6 +172,7 @@
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.pbCacto);
             this.Controls.Add(this.pbLogoForPro);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmRegistroDeTransacoes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

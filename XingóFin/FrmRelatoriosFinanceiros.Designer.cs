@@ -171,6 +171,7 @@
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.pbCacto);
             this.Controls.Add(this.pbLogoForPro);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmRelatoriosFinanceiros";
             this.Text = "FrmRelatoriosFinanceiros";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
