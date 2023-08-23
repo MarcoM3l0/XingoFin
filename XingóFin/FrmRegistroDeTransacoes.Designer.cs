@@ -73,6 +73,7 @@
             this.btnAtualizacaoDeTransacoes.TabIndex = 16;
             this.btnAtualizacaoDeTransacoes.Text = "Atualização de Transações";
             this.btnAtualizacaoDeTransacoes.UseVisualStyleBackColor = false;
+            this.btnAtualizacaoDeTransacoes.Click += new System.EventHandler(this.btnAtualizacaoDeTransacoes_Click);
             // 
             // btnReceitas
             // 
