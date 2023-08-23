@@ -99,6 +99,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="conexaoDB.cs" />
+    <Compile Include="FrmFormularioDeAtualizacaoDeTransacoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFormularioDeAtualizacaoDeTransacoes.Designer.cs">
+      <DependentUpon>FrmFormularioDeAtualizacaoDeTransacoes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmFormularioDeAtualizacaoDeTransacoes.resx">
+      <DependentUpon>FrmFormularioDeAtualizacaoDeTransacoes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
