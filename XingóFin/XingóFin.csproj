@@ -129,6 +129,7 @@
     <Compile Include="FrmRelatoriosFinanceiros.Designer.cs">
       <DependentUpon>FrmRelatoriosFinanceiros.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmFormularioDeAtualizacaoDeTransacoes.resx">

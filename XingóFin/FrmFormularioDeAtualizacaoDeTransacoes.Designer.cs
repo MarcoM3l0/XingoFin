@@ -40,6 +40,13 @@
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.dataGrid = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnConfirmar = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnConfirmarAlteracao = new System.Windows.Forms.Button();
+            this.lblTeste = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbCacto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoForPro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
@@ -78,17 +85,17 @@
             this.cbxTipoDeTransacao.Items.AddRange(new object[] {
             "Receita",
             "Despesa"});
-            this.cbxTipoDeTransacao.Location = new System.Drawing.Point(12, 112);
+            this.cbxTipoDeTransacao.Location = new System.Drawing.Point(12, 128);
             this.cbxTipoDeTransacao.Name = "cbxTipoDeTransacao";
             this.cbxTipoDeTransacao.Size = new System.Drawing.Size(121, 21);
-            this.cbxTipoDeTransacao.TabIndex = 7;
+            this.cbxTipoDeTransacao.TabIndex = 1;
             this.cbxTipoDeTransacao.SelectedIndexChanged += new System.EventHandler(this.cbxTipoDeTransacao_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 94);
+            this.label1.Location = new System.Drawing.Point(9, 110);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(126, 15);
             this.label1.TabIndex = 8;
@@ -96,16 +103,16 @@
             // 
             // txtValor
             // 
-            this.txtValor.Location = new System.Drawing.Point(156, 113);
+            this.txtValor.Location = new System.Drawing.Point(156, 129);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(120, 20);
-            this.txtValor.TabIndex = 9;
+            this.txtValor.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(153, 95);
+            this.label2.Location = new System.Drawing.Point(153, 111);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 15);
             this.label2.TabIndex = 10;
@@ -115,7 +122,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(293, 95);
+            this.label3.Location = new System.Drawing.Point(293, 111);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 15);
             this.label3.TabIndex = 12;
@@ -126,10 +133,10 @@
             this.cbxCategoria.BackColor = System.Drawing.SystemColors.Window;
             this.cbxCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxCategoria.FormattingEnabled = true;
-            this.cbxCategoria.Location = new System.Drawing.Point(296, 113);
+            this.cbxCategoria.Location = new System.Drawing.Point(296, 129);
             this.cbxCategoria.Name = "cbxCategoria";
             this.cbxCategoria.Size = new System.Drawing.Size(121, 21);
-            this.cbxCategoria.TabIndex = 11;
+            this.cbxCategoria.TabIndex = 3;
             // 
             // label4
             // 
@@ -147,12 +154,12 @@
             this.txtDescricao.Multiline = true;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(405, 148);
-            this.txtDescricao.TabIndex = 14;
+            this.txtDescricao.TabIndex = 4;
             // 
             // dataGrid
             // 
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid.Location = new System.Drawing.Point(436, 187);
+            this.dataGrid.Location = new System.Drawing.Point(436, 129);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.Size = new System.Drawing.Size(485, 251);
             this.dataGrid.TabIndex = 15;
@@ -161,18 +168,106 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(433, 169);
+            this.label5.Location = new System.Drawing.Point(433, 111);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(159, 15);
             this.label5.TabIndex = 16;
             this.label5.Text = "Registro de Transações";
+            // 
+            // btnConfirmar
+            // 
+            this.btnConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnConfirmar.Location = new System.Drawing.Point(12, 341);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(88, 28);
+            this.btnConfirmar.TabIndex = 5;
+            this.btnConfirmar.Text = "Confirmar";
+            this.btnConfirmar.UseVisualStyleBackColor = true;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
+            // 
+            // btnSair
+            // 
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnSair.Location = new System.Drawing.Point(886, 438);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(46, 28);
+            this.btnSair.TabIndex = 18;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Enabled = false;
+            this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnAlterar.Location = new System.Drawing.Point(436, 386);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(67, 28);
+            this.btnAlterar.TabIndex = 19;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Enabled = false;
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnExcluir.Location = new System.Drawing.Point(509, 386);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(65, 28);
+            this.btnExcluir.TabIndex = 20;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Enabled = false;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnCancelar.Location = new System.Drawing.Point(580, 386);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(80, 28);
+            this.btnCancelar.TabIndex = 21;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // btnConfirmarAlteracao
+            // 
+            this.btnConfirmarAlteracao.Enabled = false;
+            this.btnConfirmarAlteracao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmarAlteracao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnConfirmarAlteracao.Location = new System.Drawing.Point(105, 341);
+            this.btnConfirmarAlteracao.Name = "btnConfirmarAlteracao";
+            this.btnConfirmarAlteracao.Size = new System.Drawing.Size(171, 28);
+            this.btnConfirmarAlteracao.TabIndex = 22;
+            this.btnConfirmarAlteracao.Text = "Confirmar alteração";
+            this.btnConfirmarAlteracao.UseVisualStyleBackColor = true;
+            // 
+            // lblTeste
+            // 
+            this.lblTeste.AutoSize = true;
+            this.lblTeste.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTeste.Location = new System.Drawing.Point(102, 12);
+            this.lblTeste.Name = "lblTeste";
+            this.lblTeste.Size = new System.Drawing.Size(0, 15);
+            this.lblTeste.TabIndex = 23;
             // 
             // FrmFormularioDeAtualizacaoDeTransacoes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(933, 450);
+            this.ClientSize = new System.Drawing.Size(933, 468);
+            this.Controls.Add(this.lblTeste);
+            this.Controls.Add(this.btnConfirmarAlteracao);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnExcluir);
+            this.Controls.Add(this.btnAlterar);
+            this.Controls.Add(this.btnSair);
+            this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dataGrid);
             this.Controls.Add(this.txtDescricao);
@@ -187,6 +282,7 @@
             this.Controls.Add(this.pbLogoForPro);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmFormularioDeAtualizacaoDeTransacoes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Atualização de Transações";
             ((System.ComponentModel.ISupportInitialize)(this.pbCacto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoForPro)).EndInit();
@@ -210,5 +306,12 @@
         private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.DataGridView dataGrid;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnConfirmar;
+        private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnConfirmarAlteracao;
+        private System.Windows.Forms.Label lblTeste;
     }
 }
