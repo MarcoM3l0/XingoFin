@@ -18,7 +18,6 @@ namespace XingóFin
         string sql;
         MySqlCommand cmd;
 
-        string id_user;
 
 
         // Lista de categorias de receitas
@@ -36,7 +35,13 @@ namespace XingóFin
         public FrmFormularioDeAtualizacaoDeTransacoes()
         {
             InitializeComponent();
-            lblTeste.Text = GlobalData.UserEmail;
+            
+        }
+
+        private void FrmFormularioDeAtualizacaoDeTransacoes_Load(object sender, EventArgs e)
+        {
+            lblTeste.Text = GlobalData.UserName;
+            ListagemGridDB();
         }
 
         private void cbxTipoDeTransacao_SelectedIndexChanged(object sender, EventArgs e)
@@ -74,10 +79,10 @@ namespace XingóFin
 
                 conexao.AbrirConexao();
 
-                sql = "INSERT INTO transactions (user_id, amount, date, type, category, description, alteration, date_change) VALUES(@user_id, @amount, @date, @type, @category, @description, @alteration, @date_change)";
+                sql = "INSERT INTO transactions (user_id, amount, date, type, category, description, alteration, date_change) VALUES (@user_id, @amount, @date, @type, @category, @description, @alteration, @date_change)";
                 cmd = new MySqlCommand(sql, conexao.conexao);
 
-                cmd.Parameters.AddWithValue("@user_id", buscarIdUsuario());
+                cmd.Parameters.AddWithValue("@user_id", GlobalData.userId);
                 cmd.Parameters.AddWithValue("@amount", txtValor.Text);
                 cmd.Parameters.AddWithValue("@date", dataAtual());
                 cmd.Parameters.AddWithValue("@type", cbxTipoDeTransacao.SelectedItem.ToString());
@@ -86,7 +91,11 @@ namespace XingóFin
                 cmd.Parameters.AddWithValue("@alteration", 0);
                 cmd.Parameters.AddWithValue("@date_change", " ");
 
+
                 cmd.ExecuteNonQuery();
+
+                MessageBox.Show("@user_id: " + GlobalData.userId + " @amount: " + txtValor.Text + " @date: " + dataAtual() + " @type: " + cbxTipoDeTransacao.SelectedItem.ToString() + " @category: " + cbxCategoria.SelectedItem.ToString() + " @description: " + txtDescricao.Text);
+
                 conexao.FecharConexao();
             } 
             catch (Exception error)
@@ -104,19 +113,47 @@ namespace XingóFin
             return dataFormatada;
         }
 
-        // método que realiza uma busca no banco de dados para encontrar o ID de um usuário
-        private int buscarIdUsuario()
+        // Função para formatar as colunas do grid
+        private void FormatacaoGrid()
         {
-            conexao.AbrirConexao();
+            // Define os títulos das colunas do grid
+            dataGrid.Columns[1].HeaderText = "User Código";
+            dataGrid.Columns[2].HeaderText = "Data";
+            dataGrid.Columns[3].HeaderText = "Tipo";
+            dataGrid.Columns[4].HeaderText = "Categoria";
+            dataGrid.Columns[5].HeaderText = "Descrição";
 
-            sql = "SELECT id FROM users WHERE email=@email";
-            cmd = new MySqlCommand(sql, conexao.conexao);
-            cmd.Parameters.AddWithValue("@email", GlobalData.UserEmail);
+            dataGrid.Columns[0].Visible = false;
+            dataGrid.Columns[6].Visible = false;
+            dataGrid.Columns[7].Visible = false;
 
-            int user_id = (int)cmd.ExecuteScalar();
-            conexao.FecharConexao();
+        }
 
-            return user_id;
+        // Função para carregar os dados do banco de dados no grid
+        private void ListagemGridDB()
+        {
+            try
+            {
+                conexao.AbrirConexao();
+
+                sql = "SELECT * FROM transactions ORDER BY user_id ASC"; // Define a consulta SQL para selecionar todos os registros da tabela cliente ordenados pelo nome
+
+                cmd = new MySqlCommand(sql, conexao.conexao);
+
+                MySqlDataAdapter da = new MySqlDataAdapter();
+                da.SelectCommand = cmd;  // Atribui o objeto do tipo MySqlCommand ao objeto do tipo MySqlDataAdapter
+                DataTable dt = new DataTable();
+                da.Fill(dt); // Preenche o objeto do tipo DataTable com os dados do banco de dados usando o objeto do tipo MySqlDataAdapter
+                dataGrid.DataSource = dt; // Atribui o objeto do tipo DataTable como fonte de dados do grid
+
+                conexao.FecharConexao();
+
+                FormatacaoGrid(); // Formata as colunas do grid
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao listar dados: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnSair_Click(object sender, EventArgs e)
