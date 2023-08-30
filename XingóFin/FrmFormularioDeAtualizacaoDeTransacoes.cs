@@ -79,7 +79,7 @@ namespace XingóFin
 
                 conexao.AbrirConexao();
 
-                sql = "INSERT INTO transactions (user_id, amount, date, type, category, description, alteration, date_change) VALUES (@user_id, @amount, @date, @type, @category, @description, @alteration, @date_change)";
+                sql = "INSERT INTO transactions (user_id, amount, date, type, category, description) VALUES (@user_id, @amount, @date, @type, @category, @description)";
                 cmd = new MySqlCommand(sql, conexao.conexao);
 
                 cmd.Parameters.AddWithValue("@user_id", GlobalData.userId);
@@ -88,13 +88,9 @@ namespace XingóFin
                 cmd.Parameters.AddWithValue("@type", cbxTipoDeTransacao.SelectedItem.ToString());
                 cmd.Parameters.AddWithValue("@category", cbxCategoria.SelectedItem.ToString());
                 cmd.Parameters.AddWithValue("@description", txtDescricao.Text);
-                cmd.Parameters.AddWithValue("@alteration", 0);
-                cmd.Parameters.AddWithValue("@date_change", " ");
 
 
                 cmd.ExecuteNonQuery();
-
-                MessageBox.Show("@user_id: " + GlobalData.userId + " @amount: " + txtValor.Text + " @date: " + dataAtual() + " @type: " + cbxTipoDeTransacao.SelectedItem.ToString() + " @category: " + cbxCategoria.SelectedItem.ToString() + " @description: " + txtDescricao.Text);
 
                 conexao.FecharConexao();
             } 
