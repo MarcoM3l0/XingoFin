@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Asn1.X509;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -56,7 +57,7 @@ namespace XingóFin
                     cbxCategoria.Items.Add(categoria);
                 }
             }
-            else if (cbxTipoDeTransacao.SelectedItem != null & cbxTipoDeTransacao.SelectedItem.ToString() == "Despesa")
+            else if (cbxTipoDeTransacao.SelectedItem != null && cbxTipoDeTransacao.SelectedItem.ToString() == "Despesa")
             {
                 foreach (string categoria in categoriasDespesas)
                 {
@@ -93,6 +94,9 @@ namespace XingóFin
                 cmd.ExecuteNonQuery();
 
                 conexao.FecharConexao();
+
+                limparCampos();
+                ListagemGridDB();
             } 
             catch (Exception error)
             {
@@ -114,14 +118,15 @@ namespace XingóFin
         {
             // Define os títulos das colunas do grid
             dataGrid.Columns[1].HeaderText = "User Código";
-            dataGrid.Columns[2].HeaderText = "Data";
-            dataGrid.Columns[3].HeaderText = "Tipo";
-            dataGrid.Columns[4].HeaderText = "Categoria";
-            dataGrid.Columns[5].HeaderText = "Descrição";
+            dataGrid.Columns[2].HeaderText = "Valor";
+            dataGrid.Columns[3].HeaderText = "Data";
+            dataGrid.Columns[4].HeaderText = "Tipo";
+            dataGrid.Columns[5].HeaderText = "Categoria";
+            dataGrid.Columns[6].HeaderText = "Descrição ";
 
             dataGrid.Columns[0].Visible = false;
-            dataGrid.Columns[6].Visible = false;
             dataGrid.Columns[7].Visible = false;
+            dataGrid.Columns[8].Visible = false;
 
         }
 
@@ -132,9 +137,10 @@ namespace XingóFin
             {
                 conexao.AbrirConexao();
 
-                sql = "SELECT * FROM transactions ORDER BY user_id ASC"; // Define a consulta SQL para selecionar todos os registros da tabela cliente ordenados pelo nome
+                sql = "SELECT * FROM transactions WHERE user_id = @user_id ORDER BY date ASC"; // Define a consulta SQL para selecionar todos os registros da tabela cliente ordenados pelo nome
 
                 cmd = new MySqlCommand(sql, conexao.conexao);
+                cmd.Parameters.AddWithValue("@user_id", GlobalData.userId);
 
                 MySqlDataAdapter da = new MySqlDataAdapter();
                 da.SelectCommand = cmd;  // Atribui o objeto do tipo MySqlCommand ao objeto do tipo MySqlDataAdapter
@@ -155,6 +161,14 @@ namespace XingóFin
         private void btnSair_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void limparCampos()
+        {
+            txtValor.Text = "";
+            txtDescricao.Text = "";
+            cbxTipoDeTransacao.SelectedIndex = -1;
+            cbxCategoria.SelectedIndex = -1;
         }
 
     }

@@ -284,6 +284,7 @@
             this.Name = "FrmFormularioDeAtualizacaoDeTransacoes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Atualização de Transações";
+            this.Load += new System.EventHandler(this.FrmFormularioDeAtualizacaoDeTransacoes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbCacto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoForPro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();

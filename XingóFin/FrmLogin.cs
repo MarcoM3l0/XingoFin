@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace XingóFin
 {
@@ -62,7 +63,7 @@ namespace XingóFin
                 // Abre o formulário principal e esconde o formulário de login
                 this.Hide();
 
-                GlobalData.UserEmail = txtEmail.Text;
+                GetUserByEmail(txtEmail.Text);
 
                 FrmPrincipal principal = new FrmPrincipal();
                 principal.ShowDialog();
@@ -81,8 +82,33 @@ namespace XingóFin
         
         }
 
-        // salva o email do usuário para ser utilizado em outras partes do sistemas
-        
+        // salva dados do usuário para ser utilizado em outras partes do sistemas
+        private void GetUserByEmail(string email)
+        {
+            try
+            {
+
+                conexao.AbrirConexao();
+
+                sql = "SELECT id, username FROM users WHERE email = @Email";
+                cmd = new MySqlCommand(sql, conexao.conexao);
+                cmd.Parameters.AddWithValue("@Email", email);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    GlobalData.userId = reader.GetInt32("id");
+                    GlobalData.UserName = reader.GetString("username");
+                }
+
+                conexao.FecharConexao();
+
+            } catch (Exception erro)
+            {
+                MessageBox.Show("Ocorreu um erro: " + erro.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
 
         // Verifica se o usuário existe no banco de dados
         private bool Usuario(string email)

@@ -8,6 +8,7 @@ namespace XingóFin
 {
     internal class GlobalData
     {
-        public static string UserEmail { get; set; }
+        public static int userId { get; set; }
+        public static string UserName { get; set; }
     }
 }
