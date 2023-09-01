@@ -106,6 +106,29 @@ namespace XingóFin
             
         }
 
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            if(dataGrid.SelectedCells.Count > 0)
+            {
+                int rowIndex = dataGrid.SelectedCells[0].RowIndex;
+
+                string valorCelula = dataGrid.Rows[rowIndex].Cells[0].Value.ToString();
+
+                if(int.TryParse(valorCelula, out int id_transacao))
+                {
+                    AtualizarDadosDaTransacaoSelecionada(id_transacao);
+                }
+                else
+                {
+                    MessageBox.Show("Erro ao buscar o id da transação", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, selecione uma linha para alterar.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         // método para obter a data atual formatada
         private string dataAtual()
         {
@@ -159,6 +182,12 @@ namespace XingóFin
             }
         }
 
+        // Função para atualizar os dados da transação selecionada
+        private void AtualizarDadosDaTransacaoSelecionada(int id)
+        {
+
+        }
+
         private void btnSair_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -187,9 +216,5 @@ namespace XingóFin
             limparCampos();
         }
 
-        private void btnAlterar_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
