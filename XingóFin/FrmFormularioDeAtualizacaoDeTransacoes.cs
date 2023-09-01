@@ -43,6 +43,7 @@ namespace XingóFin
         {
             lblTeste.Text = GlobalData.UserName;
             ListagemGridDB();
+            ativarDesativarBotao(true);
         }
 
         private void cbxTipoDeTransacao_SelectedIndexChanged(object sender, EventArgs e)
@@ -171,5 +172,24 @@ namespace XingóFin
             cbxCategoria.SelectedIndex = -1;
         }
 
+        private void ativarDesativarBotao(bool controle)
+        {
+            btnConfirmar.Enabled = controle;
+            btnAlterar.Enabled = controle;
+            btnCancelar.Enabled = !controle;
+            btnExcluir.Enabled = !controle;
+            btnConfirmarAlteracao.Enabled = !controle;
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            ativarDesativarBotao(true);
+            limparCampos();
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
