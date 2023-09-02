@@ -46,7 +46,7 @@
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnConfirmarAlteracao = new System.Windows.Forms.Button();
-            this.lblTeste = new System.Windows.Forms.Label();
+            this.lblNomeUser = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbCacto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoForPro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
@@ -248,14 +248,14 @@
             this.btnConfirmarAlteracao.Text = "Confirmar alteração";
             this.btnConfirmarAlteracao.UseVisualStyleBackColor = true;
             // 
-            // lblTeste
+            // lblNomeUser
             // 
-            this.lblTeste.AutoSize = true;
-            this.lblTeste.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTeste.Location = new System.Drawing.Point(102, 12);
-            this.lblTeste.Name = "lblTeste";
-            this.lblTeste.Size = new System.Drawing.Size(0, 15);
-            this.lblTeste.TabIndex = 23;
+            this.lblNomeUser.AutoSize = true;
+            this.lblNomeUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeUser.Location = new System.Drawing.Point(102, 12);
+            this.lblNomeUser.Name = "lblNomeUser";
+            this.lblNomeUser.Size = new System.Drawing.Size(0, 15);
+            this.lblNomeUser.TabIndex = 23;
             // 
             // FrmFormularioDeAtualizacaoDeTransacoes
             // 
@@ -263,7 +263,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(933, 468);
-            this.Controls.Add(this.lblTeste);
+            this.Controls.Add(this.lblNomeUser);
             this.Controls.Add(this.btnConfirmarAlteracao);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnExcluir);
@@ -315,6 +315,6 @@
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnConfirmarAlteracao;
-        private System.Windows.Forms.Label lblTeste;
+        private System.Windows.Forms.Label lblNomeUser;
     }
 }

@@ -15,6 +15,7 @@ namespace XingóFin
         public FrmPrincipal()
         {
             InitializeComponent();
+            lblNomeUser.Text = GlobalData.UserName;
         }
 
         private void btnRegistroDeTransacoes_Click(object sender, EventArgs e)

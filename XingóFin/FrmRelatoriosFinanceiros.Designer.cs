@@ -37,6 +37,7 @@
             this.btnGraficosDeAnalise = new System.Windows.Forms.Button();
             this.btnFluxoDeCaixa = new System.Windows.Forms.Button();
             this.btnDemonstrativoDeResultados = new System.Windows.Forms.Button();
+            this.lblNomeUser = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -156,12 +157,22 @@
             this.btnDemonstrativoDeResultados.Text = "Demonstrativo de Resultados";
             this.btnDemonstrativoDeResultados.UseVisualStyleBackColor = false;
             // 
+            // lblNomeUser
+            // 
+            this.lblNomeUser.AutoSize = true;
+            this.lblNomeUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeUser.Location = new System.Drawing.Point(102, 12);
+            this.lblNomeUser.Name = "lblNomeUser";
+            this.lblNomeUser.Size = new System.Drawing.Size(0, 15);
+            this.lblNomeUser.TabIndex = 25;
+            // 
             // FrmRelatoriosFinanceiros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(90)))), ((int)(((byte)(43)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblNomeUser);
             this.Controls.Add(this.btnGraficosDeAnalise);
             this.Controls.Add(this.btnFluxoDeCaixa);
             this.Controls.Add(this.btnDemonstrativoDeResultados);
@@ -180,6 +191,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbCacto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoForPro)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -194,5 +206,6 @@
         private System.Windows.Forms.Button btnGraficosDeAnalise;
         private System.Windows.Forms.Button btnFluxoDeCaixa;
         private System.Windows.Forms.Button btnDemonstrativoDeResultados;
+        private System.Windows.Forms.Label lblNomeUser;
     }
 }

@@ -41,7 +41,7 @@ namespace XingóFin
 
         private void FrmFormularioDeAtualizacaoDeTransacoes_Load(object sender, EventArgs e)
         {
-            lblTeste.Text = GlobalData.UserName;
+            lblNomeUser.Text = GlobalData.UserName;
             ListagemGridDB();
             ativarDesativarBotao(true);
         }
@@ -235,11 +235,6 @@ namespace XingóFin
             }
         }
 
-        private void btnSair_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void limparCampos()
         {
             txtValor.Text = "";
@@ -263,5 +258,10 @@ namespace XingóFin
             limparCampos();
         }
 
-    }
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+    }//FIM
 }
