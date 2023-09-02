@@ -116,7 +116,8 @@ namespace XingóFin
 
                 if(int.TryParse(valorCelula, out int id_transacao))
                 {
-                    AtualizarDadosDaTransacaoSelecionada(id_transacao);
+                    ativarDesativarBotao(false);
+                    BuscarDadosDaTransacaoSelecionada(id_transacao);
                 }
                 else
                 {
@@ -176,16 +177,62 @@ namespace XingóFin
 
                 FormatacaoGrid(); // Formata as colunas do grid
             }
-            catch (Exception ex)
+            catch (Exception error)
             {
-                MessageBox.Show("Erro ao listar dados: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Erro ao listar dados: " + error.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        // Função para atualizar os dados da transação selecionada
-        private void AtualizarDadosDaTransacaoSelecionada(int id)
+        // Função para buscar os dados da transação selecionada
+        private void BuscarDadosDaTransacaoSelecionada(int id)
         {
+            try
+            {
+                conexao.AbrirConexao();
 
+                sql = "Select * FROM transactions WHERE id = @id";
+                cmd = new MySqlCommand(sql, conexao.conexao);
+                cmd.Parameters.AddWithValue("@id", id);
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    // Verifica o valor da coluna "type" e define a seleção do ComboBox de  tipo
+                    string tipoDeTrasancaoDB = reader.GetString(reader.GetOrdinal("type"));
+
+                    if(tipoDeTrasancaoDB == "Receita")
+                    {
+                        cbxTipoDeTransacao.SelectedIndex = 0;
+                    }
+                    else if(tipoDeTrasancaoDB == "Despesa")
+                    {
+                        cbxTipoDeTransacao.SelectedIndex = 1;
+                    }
+
+
+                    // Verifica o valor da coluna "category" e define a seleção do ComboBox de categoria
+                    string categoriaDB = reader.GetString(reader.GetOrdinal("category"));
+
+                    if (categoriasReceitas.Contains(categoriaDB))
+                    {
+                        cbxCategoria.SelectedIndex = categoriasReceitas.IndexOf(categoriaDB);
+                    }
+                    else if (categoriasDespesas.Contains(categoriaDB))
+                    {
+                        cbxCategoria.SelectedIndex = categoriasDespesas.IndexOf(categoriaDB);
+                    }
+
+                    txtValor.Text = reader.GetString(reader.GetOrdinal("amount"));
+                    txtDescricao.Text = reader.GetString(reader.GetOrdinal("description"));
+                }
+
+                conexao.FecharConexao();
+            }
+            catch(Exception error)
+            {
+                MessageBox.Show("Erro ao buscar dados: " + error.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnSair_Click(object sender, EventArgs e)
