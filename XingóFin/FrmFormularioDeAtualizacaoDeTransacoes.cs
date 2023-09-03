@@ -147,6 +147,31 @@ namespace XingóFin
             ListagemGridDB();
         }
 
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Deseja continuar?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                return;
+            }
+
+            conexao.AbrirConexao();
+
+            sql = "DELETE FROM transactions WHERE id = @id";
+            cmd = new MySqlCommand(sql, conexao.conexao);
+            cmd.Parameters.AddWithValue("@id", transaction_id);
+
+            cmd.ExecuteNonQuery();
+            conexao.FecharConexao();
+
+            longtextNew_Data = "[Excluído]";
+            salvarHistoricoDeModificacoes("exclusion");
+
+            ListagemGridDB();
+            ativarDesativarBotao(true);
+            limparCampos();
+        }
+
+
         // Função para formatar as colunas do grid
         private void FormatacaoGrid()
         {
