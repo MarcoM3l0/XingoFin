@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Google.Protobuf.WellKnownTypes;
+using MySql.Data.MySqlClient;
 using Org.BouncyCastle.Asn1.X509;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,12 @@ namespace XingóFin
         string sql;
         MySqlCommand cmd;
 
-
+        private string longtextOld_Data;
+        private string longtextNew_Data;
+        private string dateOld;
+        private string elementType;
+        private int transaction_id;
+        private bool controle;
 
         // Lista de categorias de receitas
         private List<string> categoriasReceitas = new List<string>
@@ -118,6 +124,7 @@ namespace XingóFin
                 {
                     ativarDesativarBotao(false);
                     BuscarDadosDaTransacaoSelecionada(id_transacao);
+                    transaction_id = id_transacao;
                 }
                 else
                 {
@@ -130,12 +137,14 @@ namespace XingóFin
             }
         }
 
-        // método para obter a data atual formatada
-        private string dataAtual()
+        private void btnConfirmarAlteracao_Click(object sender, EventArgs e)
         {
-            DateTime dataAtual = DateTime.Now;
-            string dataFormatada = dataAtual.ToString("dd/MM/yyyy");
-            return dataFormatada;
+            salvarAlteracoesNoBancoDeDados();
+            salvarHistoricoDeModificacoes("alteration");
+
+            limparCampos();
+            ativarDesativarBotao(true);
+            ListagemGridDB();
         }
 
         // Função para formatar as colunas do grid
@@ -196,6 +205,8 @@ namespace XingóFin
 
                 MySqlDataReader reader = cmd.ExecuteReader();
 
+                StringBuilder textBuilder = new StringBuilder();
+
                 if (reader.Read())
                 {
                     // Verifica o valor da coluna "type" e define a seleção do ComboBox de  tipo
@@ -225,6 +236,27 @@ namespace XingóFin
 
                     txtValor.Text = reader.GetString(reader.GetOrdinal("amount"));
                     txtDescricao.Text = reader.GetString(reader.GetOrdinal("description"));
+
+                    for(int i =0; i < reader.FieldCount; i++)
+                    {
+                        string valor = reader[i].ToString();
+                        textBuilder.Append("[");
+                        textBuilder.Append(valor);
+                        textBuilder.Append("]");
+                    }
+
+                    if (reader.GetOrdinal("alteration") == 0)
+                    {
+                        controle = false;
+                    }
+                    else
+                    {
+                        controle = true;
+                    }
+
+                    longtextOld_Data = textBuilder.ToString();
+                    dateOld = reader.GetString(reader.GetOrdinal("date"));
+                    elementType = reader.GetString(reader.GetOrdinal("type"));
                 }
 
                 conexao.FecharConexao();
@@ -235,6 +267,137 @@ namespace XingóFin
             }
         }
 
+        // funções para que as alterações seja salvas no banco de dados.
+        private void salvarAlteracoesNoBancoDeDados()
+        {
+            try
+            {
+                if (cbxTipoDeTransacao.SelectedItem == null && cbxCategoria.SelectedItem == null && (txtValor.Text == "" || txtValor.Text == " "))
+                {
+                    MessageBox.Show("Há campo no formulário em branco, preencha-o", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                conexao.AbrirConexao();
+
+                sql = "UPDATE transactions SET user_id = @user_id, amount = @amount, date = @date, type = @type, category = @category, description = @description, alteration = @alteration, date_change = @date_change WHERE id = @id";
+                cmd = new MySqlCommand(sql, conexao.conexao);
+
+                cmd.Parameters.AddWithValue("@id", transaction_id);
+
+                cmd.Parameters.AddWithValue("@user_id", GlobalData.userId);
+                cmd.Parameters.AddWithValue("@amount", txtValor.Text);
+                cmd.Parameters.AddWithValue("@date", dateOld);
+                cmd.Parameters.AddWithValue("@type", cbxTipoDeTransacao.SelectedItem.ToString());
+                cmd.Parameters.AddWithValue("@category", cbxCategoria.SelectedItem.ToString());
+                cmd.Parameters.AddWithValue("@description", txtDescricao.Text);
+                byte valorAlteration = 1;
+                cmd.Parameters.AddWithValue("@alteration", valorAlteration);
+                cmd.Parameters.AddWithValue("@date_change", dataAtual());
+
+
+                cmd.ExecuteNonQuery();
+
+                conexao.FecharConexao();
+
+                StringBuilder textBuilder = new StringBuilder();
+                textBuilder.Append("[");
+                textBuilder.Append(transaction_id);
+                textBuilder.Append("]");
+                textBuilder.Append("[");
+                textBuilder.Append(GlobalData.userId);
+                textBuilder.Append("]");
+                textBuilder.Append("[");
+                textBuilder.Append(txtValor.Text);
+                textBuilder.Append("]");
+                textBuilder.Append("[");
+                textBuilder.Append(dateOld);
+                textBuilder.Append("]");
+                textBuilder.Append("[");
+                textBuilder.Append(cbxTipoDeTransacao.SelectedItem.ToString());
+                textBuilder.Append("]");
+                textBuilder.Append("[");
+                textBuilder.Append(cbxCategoria.SelectedItem.ToString());
+                textBuilder.Append("]");
+                textBuilder.Append("[");
+                textBuilder.Append(txtDescricao.Text);
+                textBuilder.Append("]");
+
+                if (controle)
+                {
+                    textBuilder.Append("[");
+                    textBuilder.Append(valorAlteration);
+                    textBuilder.Append("]");
+                    textBuilder.Append("[");
+                    textBuilder.Append(dataAtual());
+                    textBuilder.Append("]");
+                }
+                
+                longtextNew_Data = textBuilder.ToString();
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Ocorreu um erro ao salvar alteração de registro: " + error.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        // funções de salavar histórico de modificações em registros.
+        private void salvarHistoricoDeModificacoes(string action)
+        {
+            try
+            {
+                conexao.AbrirConexao();
+
+                sql = "INSERT INTO historic (user_id, timestamp, action, element_type, element_id, old_data, new_data) VALUES (@user_id, @timestamp, @action, @element_type, @element_id, @old_data, @new_data) ";
+                cmd = new MySqlCommand(sql, conexao.conexao);
+
+                cmd.Parameters.AddWithValue("@user_id", GlobalData.userId);
+                cmd.Parameters.AddWithValue("@timestamp", dataEHoraAlteracao());
+
+                if(action == "alteration")
+                {
+                    cmd.Parameters.AddWithValue("@action", "Alteração");
+                }
+                else if(action == "exclusion")
+                {
+                    cmd.Parameters.AddWithValue("@action", "Exclusão");
+                }
+
+                
+                cmd.Parameters.AddWithValue("@element_type", elementType);
+                cmd.Parameters.AddWithValue("@element_id", transaction_id);
+                cmd.Parameters.AddWithValue("@old_data", longtextOld_Data);
+                cmd.Parameters.AddWithValue("@new_data", longtextNew_Data);
+
+
+
+                cmd.ExecuteNonQuery();
+
+                conexao.FecharConexao();
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Ocorreu um erro ao salvar o historico de alteração de registro: " + error.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Método para obter a data atual formatada
+        private string dataAtual()
+        {
+            DateTime dataAtual = DateTime.Now;
+            string dataFormatada = dataAtual.ToString("dd/MM/yyyy");
+            return dataFormatada;
+        }
+
+        // Método para obter a data da alteração formatada
+        private string dataEHoraAlteracao()
+        {
+            DateTime dataHora = DateTime.Now;
+            string dataFormatada = dataHora.ToString("dd/MM/yyyy - HH:mm");
+            return dataFormatada;
+        }
         private void limparCampos()
         {
             txtValor.Text = "";
