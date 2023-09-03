@@ -427,8 +427,8 @@ namespace XingóFin
         {
             txtValor.Text = "";
             txtDescricao.Text = "";
-            cbxTipoDeTransacao.SelectedIndex = -1;
             cbxCategoria.SelectedIndex = -1;
+            cbxTipoDeTransacao.SelectedIndex = -1;
         }
 
         private void ativarDesativarBotao(bool controle)
