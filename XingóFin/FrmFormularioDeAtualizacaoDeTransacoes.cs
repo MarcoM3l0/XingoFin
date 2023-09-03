@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace XingóFin
 {
@@ -42,7 +43,9 @@ namespace XingóFin
         public FrmFormularioDeAtualizacaoDeTransacoes()
         {
             InitializeComponent();
-            
+            txtValor.KeyPress += txtValor_KeyPress;
+
+
         }
 
         private void FrmFormularioDeAtualizacaoDeTransacoes_Load(object sender, EventArgs e)
@@ -50,6 +53,48 @@ namespace XingóFin
             lblNomeUser.Text = GlobalData.UserName;
             ListagemGridDB();
             ativarDesativarBotao(true);
+        }
+
+        private void txtValor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verifica se o caractere digitado é um número, uma vírgula ou uma tecla de controle
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
+            {
+                e.Handled = true; // Impede a entrada do caractere
+                return;
+            }
+
+            // Impede a entrada de mais de uma vírgula
+            if (e.KeyChar == ',' && txtValor.Text.Contains(","))
+            {
+                e.Handled = true;
+                return;
+            }
+
+            // Se a vírgula já foi digitada, verifica o número de dígitos após a vírgula
+            if (e.KeyChar == ',' && txtValor.Text.Contains(","))
+            {
+                // Obtém a parte após a vírgula
+                string decimalPart = txtValor.Text.Substring(txtValor.Text.IndexOf(",") + 1);
+
+                // Impede a entrada se já houver 2 dígitos após a vírgula
+                if (decimalPart.Length >= 2)
+                {
+                    e.Handled = true;
+                    return;
+                }
+            }
+
+            // Se é um número e já há 2 dígitos após a vírgula, impede a entrada
+            if (char.IsDigit(e.KeyChar) && txtValor.Text.Contains(","))
+            {
+                string decimalPart = txtValor.Text.Substring(txtValor.Text.IndexOf(",") + 1);
+                if (decimalPart.Length >= 2)
+                {
+                    e.Handled = true;
+                    return;
+                }
+            }
         }
 
         private void cbxTipoDeTransacao_SelectedIndexChanged(object sender, EventArgs e)
