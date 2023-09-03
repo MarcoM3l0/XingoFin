@@ -15,6 +15,7 @@ namespace XingóFin
         public FrmRelatoriosFinanceiros()
         {
             InitializeComponent();
+            lblNomeUser.Text = GlobalData.UserName;
         }
 
         private void btnSair_Click(object sender, EventArgs e)

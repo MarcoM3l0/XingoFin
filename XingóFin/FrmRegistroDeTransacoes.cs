@@ -15,6 +15,7 @@ namespace XingóFin
         public FrmRegistroDeTransacoes()
         {
             InitializeComponent();
+            lblNomeUser.Text = GlobalData.UserName;
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -22,5 +23,11 @@ namespace XingóFin
             this.Close();
         }
 
+        private void btnAtualizacaoDeTransacoes_Click(object sender, EventArgs e)
+        {
+            FrmFormularioDeAtualizacaoDeTransacoes frm = new FrmFormularioDeAtualizacaoDeTransacoes();
+
+            frm.ShowDialog();
+        }
     }
 }

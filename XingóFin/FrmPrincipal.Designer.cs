@@ -31,19 +31,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.lblConfiguracoes = new System.Windows.Forms.Label();
             this.btnRegistroDeTransacoes = new System.Windows.Forms.Button();
-            this.btnRelatoriosFinanceiros = new System.Windows.Forms.Button();
             this.btnConfiguracoes = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pbCacto = new System.Windows.Forms.PictureBox();
             this.pbLogoForPro = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.lblNomeUser = new System.Windows.Forms.Label();
+            this.btnRelatoriosFinanceiros = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCacto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoForPro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // lblConfiguracoes
@@ -70,21 +71,6 @@
             this.btnRegistroDeTransacoes.Text = "Registro de Transações";
             this.btnRegistroDeTransacoes.UseVisualStyleBackColor = false;
             this.btnRegistroDeTransacoes.Click += new System.EventHandler(this.btnRegistroDeTransacoes_Click);
-            // 
-            // btnRelatoriosFinanceiros
-            // 
-            this.btnRelatoriosFinanceiros.BackColor = System.Drawing.Color.Transparent;
-            this.btnRelatoriosFinanceiros.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnRelatoriosFinanceiros.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRelatoriosFinanceiros.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRelatoriosFinanceiros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(51)))));
-            this.btnRelatoriosFinanceiros.Location = new System.Drawing.Point(296, 310);
-            this.btnRelatoriosFinanceiros.Name = "btnRelatoriosFinanceiros";
-            this.btnRelatoriosFinanceiros.Size = new System.Drawing.Size(227, 32);
-            this.btnRelatoriosFinanceiros.TabIndex = 9;
-            this.btnRelatoriosFinanceiros.Text = "Relatórios Financeiros";
-            this.btnRelatoriosFinanceiros.UseVisualStyleBackColor = false;
-            this.btnRelatoriosFinanceiros.Click += new System.EventHandler(this.btnRelatoriosFinanceiros_Click);
             // 
             // btnConfiguracoes
             // 
@@ -114,17 +100,6 @@
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox3.Image = global::XingóFin.Properties.Resources.Relatórios_Financeiros;
-            this.pictureBox3.Location = new System.Drawing.Point(296, 157);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(200, 150);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -173,12 +148,48 @@
             this.pbLogoForPro.TabIndex = 0;
             this.pbLogoForPro.TabStop = false;
             // 
+            // lblNomeUser
+            // 
+            this.lblNomeUser.AutoSize = true;
+            this.lblNomeUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeUser.Location = new System.Drawing.Point(88, 12);
+            this.lblNomeUser.Name = "lblNomeUser";
+            this.lblNomeUser.Size = new System.Drawing.Size(0, 15);
+            this.lblNomeUser.TabIndex = 25;
+            // 
+            // btnRelatoriosFinanceiros
+            // 
+            this.btnRelatoriosFinanceiros.BackColor = System.Drawing.Color.Transparent;
+            this.btnRelatoriosFinanceiros.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnRelatoriosFinanceiros.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRelatoriosFinanceiros.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRelatoriosFinanceiros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(51)))));
+            this.btnRelatoriosFinanceiros.Location = new System.Drawing.Point(296, 310);
+            this.btnRelatoriosFinanceiros.Name = "btnRelatoriosFinanceiros";
+            this.btnRelatoriosFinanceiros.Size = new System.Drawing.Size(227, 32);
+            this.btnRelatoriosFinanceiros.TabIndex = 9;
+            this.btnRelatoriosFinanceiros.Text = "Relatórios Financeiros";
+            this.btnRelatoriosFinanceiros.UseVisualStyleBackColor = false;
+            this.btnRelatoriosFinanceiros.Click += new System.EventHandler(this.btnRelatoriosFinanceiros_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox3.Image = global::XingóFin.Properties.Resources.Relatórios_Financeiros;
+            this.pictureBox3.Location = new System.Drawing.Point(296, 157);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(200, 150);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblNomeUser);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnConfiguracoes);
             this.Controls.Add(this.btnRelatoriosFinanceiros);
@@ -196,11 +207,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tela Principal";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmPrincipal_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCacto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoForPro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,12 +223,13 @@
         private System.Windows.Forms.PictureBox pbCacto;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label lblConfiguracoes;
         private System.Windows.Forms.Button btnRegistroDeTransacoes;
-        private System.Windows.Forms.Button btnRelatoriosFinanceiros;
         private System.Windows.Forms.Button btnConfiguracoes;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Label lblNomeUser;
+        private System.Windows.Forms.Button btnRelatoriosFinanceiros;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
 
