@@ -89,6 +89,7 @@
             this.btnReceitas.TabIndex = 17;
             this.btnReceitas.Text = "Receitas ";
             this.btnReceitas.UseVisualStyleBackColor = false;
+            this.btnReceitas.Click += new System.EventHandler(this.btnReceitas_Click);
             // 
             // btnDespesas
             // 
