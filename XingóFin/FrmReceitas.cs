@@ -14,6 +14,7 @@ using iTextSharp.text.pdf;
 using System.IO;
 using System.Diagnostics;
 using System.Globalization;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace XingóFin
 {
@@ -115,9 +116,10 @@ namespace XingóFin
 
                 doc.Open();
 
-                iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(pbCacto.Image, System.Drawing.Imaging.ImageFormat.Png);
-                logo.ScaleAbsolute(70, 70);
-                doc.Add(logo);
+                iTextSharp.text.Image logoCacto = iTextSharp.text.Image.GetInstance(pbCacto.Image, System.Drawing.Imaging.ImageFormat.Png);
+                logoCacto.ScaleAbsolute(70, 70);
+                logoCacto.Alignment = Element.ALIGN_LEFT;
+                doc.Add(logoCacto);
 
                 Paragraph titulo = new Paragraph
                 {
@@ -165,9 +167,9 @@ namespace XingóFin
                     tabela.AddCell(tabelaDatos["description"].ToString());
                     tabela.AddCell(tabelaDatos["date"].ToString());
 
-                    if (tabelaDatos["alteration"].ToString() == "1")
+                    if (Convert.ToByte(tabelaDatos["alteration"]) == 1)
                     {
-                        tabela.AddCell(tabelaDatos["date_change"].ToString());
+                        tabela.AddCell($"Teve alteração em {tabelaDatos["date_change"]}");
                     }
                     else
                     {
@@ -184,11 +186,10 @@ namespace XingóFin
 
                 doc.Add(receita);
 
-                string mensagemFinal = $"Este relatório foi gerado pelo aplicativo XingóFin em {DateTime.Now.ToString("dd/MM/yyyy")}.\n\n" +
-                                       "ForPro sistemas\n" +
-                                       "<i>Desempenho e Inovação: Conectando o Futuro</i>";
 
-                Paragraph paragrafoFinal = new Paragraph(mensagemFinal)
+                Paragraph paragrafoFinal = new Paragraph($"Este relatório foi gerado pelo aplicativo XingóFin em {DateTime.Now:dd/MM/yyyy} as {DateTime.Now.ToString("HH:m:ss", CultureInfo.InvariantCulture)}.\n\n" +
+                                                         "ForPro\n" + 
+                                                         "<i>Desempenho e Inovação: Conectando o Futuro</i>")
                 {
                     Alignment = Element.ALIGN_CENTER
                 };
@@ -196,6 +197,7 @@ namespace XingóFin
                 paragrafoFinal.Font.Size = 9;
 
                 doc.Add(paragrafoFinal);
+
                 doc.Close();
 
                 if (MessageBox.Show("Relatório gerado com sucesso!\nDejesa abri o relatório? ", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)

@@ -57,27 +57,27 @@ namespace XingóFin
 
         private void txtValor_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Verifica se o caractere digitado é um número, uma vírgula ou uma tecla de controle
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
+            // Verifica se o caractere digitado é um número, um ponto ou uma tecla de controle
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
             {
                 e.Handled = true; // Impede a entrada do caractere
                 return;
             }
 
-            // Impede a entrada de mais de uma vírgula
-            if (e.KeyChar == ',' && txtValor.Text.Contains(","))
+            // Impede a entrada de mais de um ponto
+            if (e.KeyChar == '.' && txtValor.Text.Contains("."))
             {
                 e.Handled = true;
                 return;
             }
 
-            // Se a vírgula já foi digitada, verifica o número de dígitos após a vírgula
-            if (e.KeyChar == ',' && txtValor.Text.Contains(","))
+            // Se a vírgula já foi digitada, verifica o número de dígitos após o ponto
+            if (e.KeyChar == '.' && txtValor.Text.Contains("."))
             {
-                // Obtém a parte após a vírgula
-                string decimalPart = txtValor.Text.Substring(txtValor.Text.IndexOf(",") + 1);
+                // Obtém a parte após o ponto
+                string decimalPart = txtValor.Text.Substring(txtValor.Text.IndexOf(".") + 1);
 
-                // Impede a entrada se já houver 2 dígitos após a vírgula
+                // Impede a entrada se já houver 2 dígitos após o ponto
                 if (decimalPart.Length >= 2)
                 {
                     e.Handled = true;
@@ -85,10 +85,10 @@ namespace XingóFin
                 }
             }
 
-            // Se é um número e já há 2 dígitos após a vírgula, impede a entrada
-            if (char.IsDigit(e.KeyChar) && txtValor.Text.Contains(","))
+            // Se é um número e já há 2 dígitos após o ponto, impede a entrada
+            if (char.IsDigit(e.KeyChar) && txtValor.Text.Contains("."))
             {
-                string decimalPart = txtValor.Text.Substring(txtValor.Text.IndexOf(",") + 1);
+                string decimalPart = txtValor.Text.Substring(txtValor.Text.IndexOf(".") + 1);
                 if (decimalPart.Length >= 2)
                 {
                     e.Handled = true;
