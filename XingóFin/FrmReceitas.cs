@@ -82,6 +82,8 @@ namespace XingóFin
             }
         }
 
+        // Este método exibe uma caixa de diálogo para salvar um arquivo, permitindo que o usuário escolha a pasta e o nome do arquivo.
+        // Ele retorna o caminho completo do arquivo, incluindo o nome do arquivo e a extensão escolhidos pelo usuário.
         private string SalvarRelatorioEmPastaEscolhida()
         {
             string caminho = "";
@@ -102,24 +104,30 @@ namespace XingóFin
             return caminho;
         }
 
+        // Este método cria e adiciona um relatório em formato PDF, consolidando informações de receitas.
         public void CriarEAdicionarRelatorio(string diretorio)
         {
             double totalReceita = 0;
 
             try
             {
+                // Configuração do documento PDF
                 Document doc = new Document(PageSize.A4);
                 doc.SetMargins(30, 20, 30, 20);
                 doc.AddCreationDate();
 
+                // Configuração do escritor PDF
                 PdfWriter pdfWriter = PdfWriter.GetInstance(doc, new FileStream(diretorio, FileMode.Create));
 
+                // Abertura do documento
                 doc.Open();
 
+                // Adição de imagem ao documento
                 iTextSharp.text.Image logoCacto = iTextSharp.text.Image.GetInstance(pbCacto.Image, System.Drawing.Imaging.ImageFormat.Png);
                 logoCacto.ScaleAbsolute(70, 70);
                 logoCacto.Alignment = Element.ALIGN_LEFT;
                 doc.Add(logoCacto);
+
 
                 Paragraph titulo = new Paragraph
                 {
@@ -148,6 +156,7 @@ namespace XingóFin
 
                 MySqlDataReader tabelaDatos = cmd.ExecuteReader();
 
+                // Criação de tabela PDF para exibir dados das transações
                 PdfPTable tabela = new PdfPTable(5);
 
                 tabela.AddCell("Valor");
@@ -157,6 +166,7 @@ namespace XingóFin
                 
                 tabela.AddCell("Alteração");
 
+                // Preenchimento da tabela com dados das transações
                 while (tabelaDatos.Read())
                 {
                     tabela.AddCell(tabelaDatos["amount"].ToString());
@@ -216,6 +226,7 @@ namespace XingóFin
 
         }
 
+        // Abre um arquivo PDF no visualizador padrão do sistema.
         private void AbrirPDF(string diretorio)
         {
             try
