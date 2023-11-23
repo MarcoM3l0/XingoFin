@@ -158,13 +158,13 @@ namespace XingóFin
                 {
                     tabela.AddCell(tabelaDatos["amount"].ToString());
 
-                    totalReceita += (double)tabelaDatos["amount"];
+                    totalReceita += Convert.ToDouble(tabelaDatos["amount"]);
 
                     tabela.AddCell(tabelaDatos["category"].ToString());
                     tabela.AddCell(tabelaDatos["description"].ToString());
                     tabela.AddCell(tabelaDatos["date"].ToString());
 
-                    if(tabelaDatos["alteration"].ToString() == "1")
+                    if (tabelaDatos["alteration"].ToString() == "1")
                     {
                         tabela.AddCell(tabelaDatos["date_change"].ToString());
                     }
