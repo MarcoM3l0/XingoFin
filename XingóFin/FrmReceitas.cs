@@ -219,7 +219,8 @@ namespace XingóFin
             }
             catch
             {
-
+                MessageBox.Show("Ocorreu um erro ao abrir o relatório.",
+                    "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
