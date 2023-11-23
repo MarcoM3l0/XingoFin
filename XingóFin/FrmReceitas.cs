@@ -131,7 +131,7 @@ namespace XingóFin
                     Font = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.COURIER, 20),
                     Alignment = Element.ALIGN_CENTER
                 };
-                nomeCliente.Add(GlobalData.UserName + "\n");
+                nomeCliente.Add(GlobalData.UserName + "\n\n");
                 doc.Add(nomeCliente);
 
 
@@ -179,7 +179,9 @@ namespace XingóFin
                 conexao.FecharConexao();
 
                 PdfPTable receita = new PdfPTable(1);
-                receita.AddCell("Total da receita: " + totalReceita);
+                receita.AddCell("Total da receita: " + totalReceita + "\n\n");
+
+                doc.Add(receita);
 
                 string mensagemFinal = $"Este relatório foi gerado pelo aplicativo XingóFin em {DateTime.Now.ToString("dd/MM/yyyy")}.\n\n" +
                                        "ForPro sistemas\n" +
