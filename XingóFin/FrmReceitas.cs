@@ -13,6 +13,7 @@ using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System.IO;
 using System.Diagnostics;
+using System.Globalization;
 
 namespace XingóFin
 {
@@ -158,7 +159,7 @@ namespace XingóFin
                 {
                     tabela.AddCell(tabelaDatos["amount"].ToString());
 
-                    totalReceita += Convert.ToDouble(tabelaDatos["amount"]);
+                    totalReceita += Convert.ToDouble(tabelaDatos["amount"], CultureInfo.InvariantCulture);
 
                     tabela.AddCell(tabelaDatos["category"].ToString());
                     tabela.AddCell(tabelaDatos["description"].ToString());
@@ -179,7 +180,7 @@ namespace XingóFin
                 conexao.FecharConexao();
 
                 PdfPTable receita = new PdfPTable(1);
-                receita.AddCell("Total da receita: " + totalReceita + "\n\n");
+                receita.AddCell($"Total da receita: {totalReceita:F2}\n\n");
 
                 doc.Add(receita);
 
