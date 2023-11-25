@@ -55,29 +55,27 @@ namespace XingóFin
             ativarDesativarBotao(true);
         }
 
+        // Verifica se o caractere digitado é um número, um ponto ou uma tecla de controle
         private void txtValor_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Verifica se o caractere digitado é um número, um ponto ou uma tecla de controle
+            
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
             {
-                e.Handled = true; // Impede a entrada do caractere
+                e.Handled = true;
                 return;
             }
 
-            // Impede a entrada de mais de um ponto
             if (e.KeyChar == '.' && txtValor.Text.Contains("."))
             {
                 e.Handled = true;
                 return;
             }
 
-            // Se a vírgula já foi digitada, verifica o número de dígitos após o ponto
+            
             if (e.KeyChar == '.' && txtValor.Text.Contains("."))
             {
-                // Obtém a parte após o ponto
                 string decimalPart = txtValor.Text.Substring(txtValor.Text.IndexOf(".") + 1);
 
-                // Impede a entrada se já houver 2 dígitos após o ponto
                 if (decimalPart.Length >= 2)
                 {
                     e.Handled = true;
@@ -85,7 +83,6 @@ namespace XingóFin
                 }
             }
 
-            // Se é um número e já há 2 dígitos após o ponto, impede a entrada
             if (char.IsDigit(e.KeyChar) && txtValor.Text.Contains("."))
             {
                 string decimalPart = txtValor.Text.Substring(txtValor.Text.IndexOf(".") + 1);
@@ -217,7 +214,7 @@ namespace XingóFin
         }
 
 
-        // Função para formatar as colunas do grid
+        // Método para formatar as colunas do grid
         private void FormatacaoGrid()
         {
             // Define os títulos das colunas do grid
@@ -234,27 +231,27 @@ namespace XingóFin
 
         }
 
-        // Função para carregar os dados do banco de dados no grid
+        // Método para carregar os dados do banco de dados no grid
         private void ListagemGridDB()
         {
             try
             {
                 conexao.AbrirConexao();
 
-                sql = "SELECT * FROM transactions WHERE user_id = @user_id ORDER BY date ASC"; // Define a consulta SQL para selecionar todos os registros da tabela cliente ordenados pelo nome
+                sql = "SELECT * FROM transactions WHERE user_id = @user_id ORDER BY date ASC"; 
 
                 cmd = new MySqlCommand(sql, conexao.conexao);
                 cmd.Parameters.AddWithValue("@user_id", GlobalData.userId);
 
                 MySqlDataAdapter da = new MySqlDataAdapter();
-                da.SelectCommand = cmd;  // Atribui o objeto do tipo MySqlCommand ao objeto do tipo MySqlDataAdapter
+                da.SelectCommand = cmd;  
                 DataTable dt = new DataTable();
-                da.Fill(dt); // Preenche o objeto do tipo DataTable com os dados do banco de dados usando o objeto do tipo MySqlDataAdapter
-                dataGrid.DataSource = dt; // Atribui o objeto do tipo DataTable como fonte de dados do grid
+                da.Fill(dt); 
+                dataGrid.DataSource = dt; 
 
                 conexao.FecharConexao();
 
-                FormatacaoGrid(); // Formata as colunas do grid
+                FormatacaoGrid(); 
             }
             catch (Exception error)
             {
@@ -262,7 +259,7 @@ namespace XingóFin
             }
         }
 
-        // Função para buscar os dados da transação selecionada
+        // Método para buscar os dados da transação selecionada
         private void BuscarDadosDaTransacaoSelecionada(int id)
         {
             try

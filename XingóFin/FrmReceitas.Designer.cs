@@ -33,7 +33,6 @@
             this.pbLogoForPro = new System.Windows.Forms.PictureBox();
             this.dataGridReceitas = new System.Windows.Forms.DataGridView();
             this.btnImprimir = new System.Windows.Forms.Button();
-            this.btnAlterar = new System.Windows.Forms.Button();
             this.lblNomeUser = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbCacto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoForPro)).BeginInit();
@@ -47,9 +46,9 @@
             this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSair.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(51)))));
-            this.btnSair.Location = new System.Drawing.Point(628, 410);
+            this.btnSair.Location = new System.Drawing.Point(650, 407);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(53, 28);
+            this.btnSair.Size = new System.Drawing.Size(53, 31);
             this.btnSair.TabIndex = 14;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = false;
@@ -73,7 +72,7 @@
             this.pbLogoForPro.ErrorImage = global::XingóFin.Properties.Resources.ForPro___sistemas_removebg_preview;
             this.pbLogoForPro.Image = global::XingóFin.Properties.Resources.ForPro___sistemas_removebg_preview;
             this.pbLogoForPro.InitialImage = global::XingóFin.Properties.Resources.ForPro___sistemas_removebg_preview;
-            this.pbLogoForPro.Location = new System.Drawing.Point(500, -40);
+            this.pbLogoForPro.Location = new System.Drawing.Point(531, -40);
             this.pbLogoForPro.Name = "pbLogoForPro";
             this.pbLogoForPro.Size = new System.Drawing.Size(228, 173);
             this.pbLogoForPro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -85,7 +84,7 @@
             this.dataGridReceitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridReceitas.Location = new System.Drawing.Point(32, 110);
             this.dataGridReceitas.Name = "dataGridReceitas";
-            this.dataGridReceitas.Size = new System.Drawing.Size(633, 242);
+            this.dataGridReceitas.Size = new System.Drawing.Size(671, 242);
             this.dataGridReceitas.TabIndex = 15;
             // 
             // btnImprimir
@@ -103,20 +102,6 @@
             this.btnImprimir.UseVisualStyleBackColor = false;
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
-            // btnAlterar
-            // 
-            this.btnAlterar.BackColor = System.Drawing.Color.Transparent;
-            this.btnAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnAlterar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(51)))));
-            this.btnAlterar.Location = new System.Drawing.Point(124, 358);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(74, 34);
-            this.btnAlterar.TabIndex = 17;
-            this.btnAlterar.Text = "Alterar";
-            this.btnAlterar.UseVisualStyleBackColor = false;
-            // 
             // lblNomeUser
             // 
             this.lblNomeUser.AutoSize = true;
@@ -132,9 +117,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(693, 450);
+            this.ClientSize = new System.Drawing.Size(726, 450);
             this.Controls.Add(this.lblNomeUser);
-            this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.dataGridReceitas);
             this.Controls.Add(this.btnSair);
@@ -142,6 +126,7 @@
             this.Controls.Add(this.pbLogoForPro);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmReceitas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Receitas";
             ((System.ComponentModel.ISupportInitialize)(this.pbCacto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoForPro)).EndInit();
@@ -158,7 +143,6 @@
         private System.Windows.Forms.PictureBox pbLogoForPro;
         private System.Windows.Forms.DataGridView dataGridReceitas;
         private System.Windows.Forms.Button btnImprimir;
-        private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Label lblNomeUser;
     }
 }
