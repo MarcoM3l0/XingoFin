@@ -29,5 +29,19 @@ namespace XingóFin
 
             frm.ShowDialog();
         }
+
+        private void btnReceitas_Click(object sender, EventArgs e)
+        {
+            FrmReceitas frm = new FrmReceitas();
+
+            frm.ShowDialog();
+        }
+
+        private void btnDespesas_Click(object sender, EventArgs e)
+        {
+            FrmDespesas frm = new FrmDespesas();
+
+            frm.ShowDialog();
+        }
     }
 }

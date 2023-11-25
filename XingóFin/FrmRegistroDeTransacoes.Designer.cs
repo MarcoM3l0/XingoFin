@@ -33,12 +33,12 @@
             this.btnAtualizacaoDeTransacoes = new System.Windows.Forms.Button();
             this.btnReceitas = new System.Windows.Forms.Button();
             this.btnDespesas = new System.Windows.Forms.Button();
+            this.lblNomeUser = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pbCacto = new System.Windows.Forms.PictureBox();
             this.pbLogoForPro = new System.Windows.Forms.PictureBox();
-            this.lblNomeUser = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -89,6 +89,7 @@
             this.btnReceitas.TabIndex = 17;
             this.btnReceitas.Text = "Receitas ";
             this.btnReceitas.UseVisualStyleBackColor = false;
+            this.btnReceitas.Click += new System.EventHandler(this.btnReceitas_Click);
             // 
             // btnDespesas
             // 
@@ -103,6 +104,16 @@
             this.btnDespesas.TabIndex = 18;
             this.btnDespesas.Text = "Despesas";
             this.btnDespesas.UseVisualStyleBackColor = false;
+            this.btnDespesas.Click += new System.EventHandler(this.btnDespesas_Click);
+            // 
+            // lblNomeUser
+            // 
+            this.lblNomeUser.AutoSize = true;
+            this.lblNomeUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeUser.Location = new System.Drawing.Point(102, 12);
+            this.lblNomeUser.Name = "lblNomeUser";
+            this.lblNomeUser.Size = new System.Drawing.Size(0, 15);
+            this.lblNomeUser.TabIndex = 24;
             // 
             // pictureBox3
             // 
@@ -158,15 +169,6 @@
             this.pbLogoForPro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbLogoForPro.TabIndex = 2;
             this.pbLogoForPro.TabStop = false;
-            // 
-            // lblNomeUser
-            // 
-            this.lblNomeUser.AutoSize = true;
-            this.lblNomeUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeUser.Location = new System.Drawing.Point(102, 12);
-            this.lblNomeUser.Name = "lblNomeUser";
-            this.lblNomeUser.Size = new System.Drawing.Size(0, 15);
-            this.lblNomeUser.TabIndex = 24;
             // 
             // FrmRegistroDeTransacoes
             // 

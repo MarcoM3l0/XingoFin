@@ -107,6 +107,7 @@
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(120, 20);
             this.txtValor.TabIndex = 2;
+            this.txtValor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValor_KeyPress);
             // 
             // label2
             // 
@@ -222,6 +223,7 @@
             this.btnExcluir.TabIndex = 20;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnCancelar
             // 
@@ -247,6 +249,7 @@
             this.btnConfirmarAlteracao.TabIndex = 22;
             this.btnConfirmarAlteracao.Text = "Confirmar alteração";
             this.btnConfirmarAlteracao.UseVisualStyleBackColor = true;
+            this.btnConfirmarAlteracao.Click += new System.EventHandler(this.btnConfirmarAlteracao_Click);
             // 
             // lblNomeUser
             // 
