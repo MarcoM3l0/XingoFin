@@ -34,17 +34,17 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtLiquido = new System.Windows.Forms.TextBox();
+            this.lblLiquido = new System.Windows.Forms.Label();
+            this.txtImpostos = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtOutrasReceitasEDespesas = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtLucroOperacional = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtDespesasOperacionais = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtMargemBruta = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCpv = new System.Windows.Forms.TextBox();
             this.txtReceita = new System.Windows.Forms.TextBox();
@@ -115,17 +115,17 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(91)))), ((int)(((byte)(40)))));
-            this.panel1.Controls.Add(this.textBox8);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.textBox7);
+            this.panel1.Controls.Add(this.txtLiquido);
+            this.panel1.Controls.Add(this.lblLiquido);
+            this.panel1.Controls.Add(this.txtImpostos);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.txtOutrasReceitasEDespesas);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.txtLucroOperacional);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.txtDespesasOperacionais);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.txtMargemBruta);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtCpv);
             this.panel1.Controls.Add(this.txtReceita);
@@ -136,31 +136,30 @@
             this.panel1.Size = new System.Drawing.Size(659, 179);
             this.panel1.TabIndex = 48;
             // 
-            // textBox8
+            // txtLiquido
             // 
-            this.textBox8.Enabled = false;
-            this.textBox8.Location = new System.Drawing.Point(517, 137);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(137, 20);
-            this.textBox8.TabIndex = 62;
+            this.txtLiquido.Enabled = false;
+            this.txtLiquido.Location = new System.Drawing.Point(517, 137);
+            this.txtLiquido.Name = "txtLiquido";
+            this.txtLiquido.Size = new System.Drawing.Size(137, 20);
+            this.txtLiquido.TabIndex = 62;
             // 
-            // label8
+            // lblLiquido
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(399, 138);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(112, 17);
-            this.label8.TabIndex = 61;
-            this.label8.Text = "Lucro Líquido:";
+            this.lblLiquido.AutoSize = true;
+            this.lblLiquido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLiquido.Location = new System.Drawing.Point(386, 138);
+            this.lblLiquido.Name = "lblLiquido";
+            this.lblLiquido.Size = new System.Drawing.Size(0, 17);
+            this.lblLiquido.TabIndex = 61;
             // 
-            // textBox7
+            // txtImpostos
             // 
-            this.textBox7.Enabled = false;
-            this.textBox7.Location = new System.Drawing.Point(517, 74);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(137, 20);
-            this.textBox7.TabIndex = 60;
+            this.txtImpostos.Enabled = false;
+            this.txtImpostos.Location = new System.Drawing.Point(517, 74);
+            this.txtImpostos.Name = "txtImpostos";
+            this.txtImpostos.Size = new System.Drawing.Size(137, 20);
+            this.txtImpostos.TabIndex = 60;
             // 
             // label6
             // 
@@ -172,13 +171,13 @@
             this.label6.TabIndex = 59;
             this.label6.Text = "Impostos:";
             // 
-            // textBox6
+            // txtOutrasReceitasEDespesas
             // 
-            this.textBox6.Enabled = false;
-            this.textBox6.Location = new System.Drawing.Point(519, 48);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(137, 20);
-            this.textBox6.TabIndex = 58;
+            this.txtOutrasReceitasEDespesas.Enabled = false;
+            this.txtOutrasReceitasEDespesas.Location = new System.Drawing.Point(519, 48);
+            this.txtOutrasReceitasEDespesas.Name = "txtOutrasReceitasEDespesas";
+            this.txtOutrasReceitasEDespesas.Size = new System.Drawing.Size(137, 20);
+            this.txtOutrasReceitasEDespesas.TabIndex = 58;
             // 
             // label5
             // 
@@ -190,13 +189,13 @@
             this.label5.TabIndex = 57;
             this.label5.Text = "Outras Receitas e Despesas:";
             // 
-            // textBox5
+            // txtLucroOperacional
             // 
-            this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(519, 22);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(137, 20);
-            this.textBox5.TabIndex = 56;
+            this.txtLucroOperacional.Enabled = false;
+            this.txtLucroOperacional.Location = new System.Drawing.Point(519, 22);
+            this.txtLucroOperacional.Name = "txtLucroOperacional";
+            this.txtLucroOperacional.Size = new System.Drawing.Size(137, 20);
+            this.txtLucroOperacional.TabIndex = 56;
             // 
             // label4
             // 
@@ -226,13 +225,13 @@
             this.label3.TabIndex = 53;
             this.label3.Text = "Despesas Operacionais:";
             // 
-            // textBox3
+            // txtMargemBruta
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(171, 74);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(137, 20);
-            this.textBox3.TabIndex = 52;
+            this.txtMargemBruta.Enabled = false;
+            this.txtMargemBruta.Location = new System.Drawing.Point(171, 74);
+            this.txtMargemBruta.Name = "txtMargemBruta";
+            this.txtMargemBruta.Size = new System.Drawing.Size(137, 20);
+            this.txtMargemBruta.TabIndex = 52;
             // 
             // label2
             // 
@@ -294,6 +293,7 @@
             this.Controls.Add(this.pbLogoForPro);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmDemonstrativoDeResultados";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Demonstrativo de resultados";
             ((System.ComponentModel.ISupportInitialize)(this.pbCacto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoForPro)).EndInit();
@@ -312,17 +312,17 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtLiquido;
+        private System.Windows.Forms.Label lblLiquido;
+        private System.Windows.Forms.TextBox txtImpostos;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtOutrasReceitasEDespesas;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtLucroOperacional;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtDespesasOperacionais;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtMargemBruta;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCpv;
         private System.Windows.Forms.TextBox txtReceita;
