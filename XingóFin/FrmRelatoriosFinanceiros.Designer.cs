@@ -128,6 +128,7 @@
             this.btnGraficosDeAnalise.TabIndex = 21;
             this.btnGraficosDeAnalise.Text = "Gráficos de Análise";
             this.btnGraficosDeAnalise.UseVisualStyleBackColor = false;
+            this.btnGraficosDeAnalise.Click += new System.EventHandler(this.btnGraficosDeAnalise_Click);
             // 
             // btnFluxoDeCaixa
             // 
@@ -142,6 +143,7 @@
             this.btnFluxoDeCaixa.TabIndex = 20;
             this.btnFluxoDeCaixa.Text = "Fluxo de Caixa";
             this.btnFluxoDeCaixa.UseVisualStyleBackColor = false;
+            this.btnFluxoDeCaixa.Click += new System.EventHandler(this.btnFluxoDeCaixa_Click);
             // 
             // btnDemonstrativoDeResultados
             // 
@@ -156,6 +158,7 @@
             this.btnDemonstrativoDeResultados.TabIndex = 19;
             this.btnDemonstrativoDeResultados.Text = "Demonstrativo de Resultados";
             this.btnDemonstrativoDeResultados.UseVisualStyleBackColor = false;
+            this.btnDemonstrativoDeResultados.Click += new System.EventHandler(this.btnDemonstrativoDeResultados_Click);
             // 
             // lblNomeUser
             // 
@@ -184,7 +187,7 @@
             this.Controls.Add(this.pbLogoForPro);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmRelatoriosFinanceiros";
-            this.Text = "FrmRelatoriosFinanceiros";
+            this.Text = "Relatorios Financeiros";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

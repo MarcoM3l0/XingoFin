@@ -89,7 +89,7 @@ namespace XingóFin
                 // Preenchimento da tabela com dados das transações
                 while (tabelaDatos.Read())
                 {
-                    tabela.AddCell($"R${tabelaDatos["amount"]}");
+                    tabela.AddCell($"R${tabelaDatos["amount"].ToString().Replace('.',',')}");
 
                     totalValor += Convert.ToDouble(tabelaDatos["amount"], CultureInfo.InvariantCulture);
 
