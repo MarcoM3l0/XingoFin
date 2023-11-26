@@ -42,7 +42,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtDespesasOperacionais = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -123,7 +123,7 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.textBox5);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.txtDespesasOperacionais);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.label2);
@@ -208,13 +208,13 @@
             this.label4.TabIndex = 55;
             this.label4.Text = "Lucro Operacional:";
             // 
-            // textBox4
+            // txtDespesasOperacionais
             // 
-            this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(171, 100);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(137, 20);
-            this.textBox4.TabIndex = 54;
+            this.txtDespesasOperacionais.Enabled = false;
+            this.txtDespesasOperacionais.Location = new System.Drawing.Point(171, 100);
+            this.txtDespesasOperacionais.Name = "txtDespesasOperacionais";
+            this.txtDespesasOperacionais.Size = new System.Drawing.Size(137, 20);
+            this.txtDespesasOperacionais.TabIndex = 54;
             // 
             // label3
             // 
@@ -320,7 +320,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtDespesasOperacionais;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label2;

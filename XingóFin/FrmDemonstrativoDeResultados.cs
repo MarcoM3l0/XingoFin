@@ -41,6 +41,7 @@ namespace XingóFin
 
                 TotalReceita(informacoes);
                 CustosProdutosVendidos(informacoes);
+                DespesasOperacionais(informacoes);
 
                 conexao.FecharConexao();
             }
@@ -49,6 +50,7 @@ namespace XingóFin
                 MessageBox.Show("Erro Carregar informaçoes!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void TotalReceita(DataTable informacoes)
         {
@@ -60,6 +62,7 @@ namespace XingóFin
                 {
                     var tipo = row["type"].ToString();
                     double valor = Convert.ToDouble(row["amount"], CultureInfo.InvariantCulture);
+
                     if (tipo == "Receita")
                         totalReceita += valor;
                 }
@@ -90,12 +93,8 @@ namespace XingóFin
                     double valor = Convert.ToDouble(row["amount"], CultureInfo.InvariantCulture);
 
                     if (tipo == "Despesa")
-                    {
                         if (cpv.Contains(categoria))
-                        {
                             custosProdutosVendidos += valor;
-                        }
-                    }
 
                 }
 
@@ -106,6 +105,32 @@ namespace XingóFin
                 txtCpv.Text = "Erro";
             }
             
+        }
+
+        private void DespesasOperacionais(DataTable informacoes)
+        {
+            double despesasOperacionais = 0;
+            List<string> dO = new List<string>()
+            {
+                "Despesas de Marketing", "Despesas de Viagem", "Material de Escritório", "Despesas Bancárias", "Serviços de Contabilidade", "Despesas de Treinamento", "Publicidade e Promoção", "Despesas de Eventos", "Aluguel de Espaço", "Contas de Energia"
+            };
+
+            try
+            {
+                foreach (DataRow row in informacoes.Rows)
+                {
+                    var tipo = row["type"].ToString();
+                    if (tipo == "Despesa")
+                        if (dO.Contains(row["category"].ToString()))
+                            despesasOperacionais += Convert.ToDouble(row["amount"], CultureInfo.InvariantCulture);
+                }
+
+                txtDespesasOperacionais.Text = $"R${despesasOperacionais:F2}";
+            }
+            catch
+            {
+                txtDespesasOperacionais.Text = "Erro";
+            }
         }
 
         private void btnSair_Click(object sender, EventArgs e)
