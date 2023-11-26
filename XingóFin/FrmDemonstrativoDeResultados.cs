@@ -39,6 +39,7 @@ namespace XingóFin
                 MySqlDataReader reader = cmd.ExecuteReader();
                 informacoes.Load(reader);
 
+                TotalReceita(informacoes);
                 CustosProdutosVendidos(informacoes);
 
                 conexao.FecharConexao();
@@ -47,6 +48,30 @@ namespace XingóFin
             {
                 MessageBox.Show("Erro Carregar informaçoes!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void TotalReceita(DataTable informacoes)
+        {
+            double totalReceita = 0;
+
+            try
+            {
+                foreach (DataRow row in informacoes.Rows)
+                {
+                    var tipo = row["type"].ToString();
+                    double valor = Convert.ToDouble(row["amount"], CultureInfo.InvariantCulture);
+                    if (tipo == "Receita")
+                        totalReceita += valor;
+                }
+
+                txtReceita.Text = $"R${totalReceita:F2}";
+            }
+            catch
+            {
+                txtReceita.Text = "Erro";
+            }
+
+            
         }
 
         private void CustosProdutosVendidos(DataTable informacoes)

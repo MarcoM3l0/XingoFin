@@ -47,7 +47,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCpv = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtReceita = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbCacto)).BeginInit();
@@ -128,7 +128,7 @@
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtCpv);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtReceita);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 88);
@@ -252,13 +252,13 @@
             this.txtCpv.Size = new System.Drawing.Size(137, 20);
             this.txtCpv.TabIndex = 50;
             // 
-            // textBox1
+            // txtReceita
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(171, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(137, 20);
-            this.textBox1.TabIndex = 49;
+            this.txtReceita.Enabled = false;
+            this.txtReceita.Location = new System.Drawing.Point(171, 22);
+            this.txtReceita.Name = "txtReceita";
+            this.txtReceita.Size = new System.Drawing.Size(137, 20);
+            this.txtReceita.TabIndex = 49;
             // 
             // label7
             // 
@@ -325,7 +325,7 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCpv;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtReceita;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label1;
     }
