@@ -31,7 +31,7 @@
             this.pbCacto = new System.Windows.Forms.PictureBox();
             this.pbLogoForPro = new System.Windows.Forms.PictureBox();
             this.lblNomeUser = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnImprimir = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtLiquido = new System.Windows.Forms.TextBox();
@@ -89,16 +89,17 @@
             this.lblNomeUser.Size = new System.Drawing.Size(0, 15);
             this.lblNomeUser.TabIndex = 24;
             // 
-            // button1
+            // btnImprimir
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(88)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(12, 273);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 30);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Imprimir";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(88)))), ((int)(((byte)(0)))));
+            this.btnImprimir.Location = new System.Drawing.Point(12, 273);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(75, 30);
+            this.btnImprimir.TabIndex = 25;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnSair
             // 
@@ -287,7 +288,7 @@
             this.ClientSize = new System.Drawing.Size(683, 328);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSair);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.lblNomeUser);
             this.Controls.Add(this.pbCacto);
             this.Controls.Add(this.pbLogoForPro);
@@ -309,7 +310,7 @@
         private System.Windows.Forms.PictureBox pbCacto;
         private System.Windows.Forms.PictureBox pbLogoForPro;
         private System.Windows.Forms.Label lblNomeUser;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtLiquido;

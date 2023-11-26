@@ -43,10 +43,21 @@ namespace XingóFin
                 doc.Open();
 
                 // Adição de imagem ao documento
-                Image logoCacto = Image.GetInstance(Properties.Resources.cacto, System.Drawing.Imaging.ImageFormat.Png);
+                iTextSharp.text.Image logoCacto = iTextSharp.text.Image.GetInstance(Properties.Resources.cacto, System.Drawing.Imaging.ImageFormat.Png);
                 logoCacto.ScaleAbsolute(70, 70);
+                logoCacto.SetAbsolutePosition(20, 750);
                 logoCacto.Alignment = Element.ALIGN_LEFT;
                 doc.Add(logoCacto);
+
+                iTextSharp.text.Image logoMarca = iTextSharp.text.Image.GetInstance(Properties.Resources.ForPro___sistemas_removebg_preview, System.Drawing.Imaging.ImageFormat.Png);
+                logoMarca.ScaleAbsolute(150, 150);
+                logoMarca.SetAbsolutePosition(450, 720);
+                logoMarca.Alignment = Element.ALIGN_RIGHT;
+                doc.Add(logoMarca);
+
+                Paragraph p = new Paragraph();
+                p.Add("\n\n\n\n\n");
+                doc.Add(p);
 
 
                 Paragraph titulo = new Paragraph
