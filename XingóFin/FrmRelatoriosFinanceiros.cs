@@ -18,6 +18,22 @@ namespace XingóFin
             lblNomeUser.Text = GlobalData.UserName;
         }
 
+
+        private void btnDemonstrativoDeResultados_Click(object sender, EventArgs e)
+        {
+            FrmDemonstrativoDeResultados frm = new FrmDemonstrativoDeResultados();
+            frm.ShowDialog();
+        }
+
+        private void btnFluxoDeCaixa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGraficosDeAnalise_Click(object sender, EventArgs e)
+        {
+
+        }
         private void btnSair_Click(object sender, EventArgs e)
         {
             this.Close();
