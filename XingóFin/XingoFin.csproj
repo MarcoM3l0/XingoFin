@@ -138,11 +138,23 @@
     <Compile Include="FrmDespesas.Designer.cs">
       <DependentUpon>FrmDespesas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmFluxoDeCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFluxoDeCaixa.Designer.cs">
+      <DependentUpon>FrmFluxoDeCaixa.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmFormularioDeAtualizacaoDeTransacoes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmFormularioDeAtualizacaoDeTransacoes.Designer.cs">
       <DependentUpon>FrmFormularioDeAtualizacaoDeTransacoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGraficosAnalise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGraficosAnalise.Designer.cs">
+      <DependentUpon>FrmGraficosAnalise.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
@@ -183,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDespesas.resx">
       <DependentUpon>FrmDespesas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFluxoDeCaixa.resx">
+      <DependentUpon>FrmFluxoDeCaixa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmFormularioDeAtualizacaoDeTransacoes.resx">
       <DependentUpon>FrmFormularioDeAtualizacaoDeTransacoes.cs</DependentUpon>
