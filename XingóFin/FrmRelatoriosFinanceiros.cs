@@ -25,11 +25,6 @@ namespace XingóFin
             frm.ShowDialog();
         }
 
-        private void btnFluxoDeCaixa_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnGraficosDeAnalise_Click(object sender, EventArgs e)
         {
 
